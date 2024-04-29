@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+	font-family: 'Montserrat';
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.main-description {
+	
+}
+
+.gate {
+	height: 20vh;
+	margin-top: 1.5rem;
+}
+
+.header {
+	
+}
+
+.cause-to-participate {
+	
+}
+
+.events-map {
+	
+}
+
+.contacts {
+	
+}
+
+.footer {
+	background: #020122;
+	color: #EEE5E9;
+}
+
+.big-text {
+	text-align: justify;
+	text-indent: 3rem;
+}
+
+.footer-button {
+	background: #020122;
+	color: #EEE5E9;
+}
+
+a.with-dark-phone {
+	color: #EEE5E9;
+}
+
+a.with-dark-phone:hover {
+	color: #F4442E;
+}
