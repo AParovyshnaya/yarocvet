@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import
+	url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
+	;
 
 body {
 	font-family: 'Montserrat';
@@ -58,4 +60,10 @@ a.with-dark-phone {
 
 a.with-dark-phone:hover {
 	color: #F4442E;
+}
+
+.copyrights {
+	border-color: #F7F3F5;
+	border-top-width: 1px;
+	border-style: solid none none none;
 }
