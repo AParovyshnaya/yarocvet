@@ -16,7 +16,16 @@
         eType="#//Town" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Road">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="towns" lowerBound="1" upperBound="-1"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="towns" lowerBound="1" upperBound="-1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventsMap">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="towns" upperBound="-1"
+        eType="#//Town" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
+        eType="#//TownType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="regions" upperBound="-1"
+        eType="#//Region" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roads" upperBound="-1"
+        eType="#//Road" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>
