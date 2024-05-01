@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
  * <!-- begin-user-doc -->
  * The <b>Resource </b> associated with the package.
  * <!-- end-user-doc -->
- * @see ru.aparovyshnaia.yarocvet.events.model.util.EventsResourceFactoryImpl
+ * @see ru.aparovyshnaia.yarocvet.events.model.util.EventsJsonResourceFactoryImpl
  * @generated
  */
 public class EventsResourceImpl extends XMIResourceImpl {

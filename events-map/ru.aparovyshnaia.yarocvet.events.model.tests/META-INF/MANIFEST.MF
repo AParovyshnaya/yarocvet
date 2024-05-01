@@ -9,6 +9,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: ru.aparovyshnaia.yarocvet.events.model.tests
+Import-Package: org.junit.jupiter.api;version="[5.9.0,6.0.0]"
 Require-Bundle: org.eclipse.core.runtime,
  ru.aparovyshnaia.yarocvet.events.model;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,

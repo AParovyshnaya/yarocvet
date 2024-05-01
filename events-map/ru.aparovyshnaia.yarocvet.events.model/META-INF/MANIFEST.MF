@@ -15,7 +15,9 @@ Export-Package: events,
  ru.aparovyshnaia.yarocvet.events.model.impl,
  ru.aparovyshnaia.yarocvet.events.model.meta,
  ru.aparovyshnaia.yarocvet.events.model.util
-Require-Bundle: org.eclipse.core.runtime,
+Import-Package: com.fasterxml.jackson.databind;version="2.16.1"
+Require-Bundle: org.eclipse.core.runtime;resolution:=optional;x-installation:=greedy,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.emf.ecore.xmi;visibility:=reexport
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ org.eclipse.emfcloud.emfjson-jackson;bundle-version="2.2.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
