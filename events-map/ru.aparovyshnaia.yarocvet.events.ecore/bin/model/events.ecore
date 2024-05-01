@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="events" nsURI="http://ru.aparovyshnaia/events/0.1.0" nsPrefix="events">
+  <eClassifiers xsi:type="ecore:EClass" name="Town">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="start" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//TownType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TownType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Region">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="towns" lowerBound="1" upperBound="-1"
+        eType="#//Town"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Road">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="towns" lowerBound="1" upperBound="-1"
+        eType="#//Town"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventsMap">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="towns" upperBound="-1"
+        eType="#//Town" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
+        eType="#//TownType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="regions" upperBound="-1"
+        eType="#//Region" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roads" upperBound="-1"
+        eType="#//Road" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>
