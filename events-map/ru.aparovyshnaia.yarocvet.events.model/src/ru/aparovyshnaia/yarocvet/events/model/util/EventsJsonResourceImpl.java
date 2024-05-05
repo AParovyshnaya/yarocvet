@@ -11,4 +11,10 @@ public final class EventsJsonResourceImpl extends JsonResource {
 		super(uri, mapper);
 	}
 
+	@Override
+	protected boolean useUUIDs() {
+		return false;
+	}
+
+	
 }

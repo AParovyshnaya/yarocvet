@@ -15,14 +15,18 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
  */
 public class EventsResourceImpl extends XMIResourceImpl {
 	/**
-	 * Creates an instance of the resource.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param uri the URI of the new resource.
 	 * @generated
 	 */
 	public EventsResourceImpl(URI uri) {
 		super(uri);
 	}
 
+	@Override
+	/**
+	 * @generated NOT
+	 */
+	protected boolean useUUIDs() {
+		return true;
+	}
+	
 } //EventsResourceImpl

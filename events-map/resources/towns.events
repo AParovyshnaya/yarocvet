@@ -1,0 +1,9 @@
+{
+  "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
+  "name" : "world",
+  "start" : "2024-05-05T10:51:34",
+  "type" : {
+    "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//TownType",
+    "$ref" : "types.events#/"
+  }
+}

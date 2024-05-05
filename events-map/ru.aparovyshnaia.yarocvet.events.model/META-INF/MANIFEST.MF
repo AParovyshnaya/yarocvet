@@ -8,10 +8,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: events,
- events.impl,
- events.util,
- ru.aparovyshnaia.yarocvet.events.model.api,
+Export-Package: ru.aparovyshnaia.yarocvet.events.model.api,
  ru.aparovyshnaia.yarocvet.events.model.impl,
  ru.aparovyshnaia.yarocvet.events.model.meta,
  ru.aparovyshnaia.yarocvet.events.model.util
