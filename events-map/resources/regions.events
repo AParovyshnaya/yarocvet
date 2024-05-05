@@ -1,0 +1,27 @@
+[ {
+  "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Region",
+  "name" : "Ecology",
+  "towns" : [ {
+    "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
+    "$ref" : "towns.events#/0"
+  }, {
+    "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
+    "$ref" : "towns.events#/1"
+  }, {
+    "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
+    "$ref" : "towns.events#/2"
+  } ]
+}, {
+  "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Region",
+  "name" : "Economic",
+  "towns" : [ {
+    "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
+    "$ref" : "towns.events#/0"
+  }, {
+    "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
+    "$ref" : "towns.events#/1"
+  }, {
+    "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
+    "$ref" : "towns.events#/2"
+  } ]
+} ]

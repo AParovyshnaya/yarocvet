@@ -18,32 +18,43 @@ final class ResourceContent {
 	List<TownType> types;
 	List<Road> roads;
 	List<Region> regions;
-	
-	void get() {
-		
+
+	public ResourceContent() {
+		this.towns = towns();
+		this.types = towns.stream().map(t -> t.getType()).toList();
+		this.roads = roads();
+		this.regions = regions();
 	}
 	
-	private void towns() {
-		TownType type = type("y");
-		Town town = town("x", new Date(), type);
+	private List<Town> towns() {
+		TownType opening = type("Glorious opening");
+		TownType conference = type("Conference");
+		return List.of(town("Glorious opening of First Yarocvet session", new Date(1728471600L), opening), town("Microplastic disaster at Finskiy Bay and Kotlin", new Date(1739293200L), conference), town("Agronomical companies in Gatchinskiy Region", new Date(1741366800L), conference));
 	}
 	
-	private Road road(EList<Town> points) {
+	private List<Road> roads() {
+		return List.of(road(List.of(this.towns.get(1), this.towns.get(2))));
+	}
+	
+	private List<Region> regions() {
+		return List.of(region("Ecology", List.of(this.towns.get(1), this.towns.get(2))), region("Economic", List.of(this.towns.get(2))));
+	}
+	
+	private Road road(List<Town> towns) {
 		Road road = EventsFactory.eINSTANCE.createRoad();
-		road.eSet((EStructuralFeature) points, road);
+		road.getTowns().addAll(towns);
 		return road;
 	}
 	
-	private Region region(String name, EList<Town> points) {
+	private Region region(String name, List<Town> points) {
 		Region region = EventsFactory.eINSTANCE.createRegion();
 		region.setName(name);
-		region.eSet((EStructuralFeature) points, region);
+		region.getTowns().addAll(towns);
 		return region;
 	}
 	
 	private Town town(String name, Date start, TownType type) {
 		Town town = EventsFactory.eINSTANCE.createTown();
-		// town.setName("Торжественное открытие «»\r\n Яроцвета первого созыва");
 		town.setName(name);
 		// FIXME: add normal time
 		town.setStart(start);
@@ -51,6 +62,7 @@ final class ResourceContent {
 		return town;
 	}
 	
+	@SuppressWarnings("unused")
 	private Town fullTown(String name, Date strat, TownType type, Date end) {
 		Town town = town(name, strat, type);
 		town.setEnd(end);
@@ -59,7 +71,6 @@ final class ResourceContent {
 
 	private TownType type(String name) {
 		TownType type = EventsFactory.eINSTANCE.createTownType();
-		// type.setName("Торжественное открытие");
 		type.setName(name);
 		// TODO: calculate type name with town name
 		return type;

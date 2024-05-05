@@ -26,22 +26,7 @@ public final class HelloWorldTest {
 
 	@Test
 	void hello() throws IOException {
-		Town town = town("world", new Date(), type("Glorious opening"));
-		TownType type = town.getType();
-
-		// save
-		ResourceSet set = new ResourceSetImpl();
-
-		Resource towns = set.createResource(uri("towns.events"));
-		towns.getContents().add(town);
-
-		Resource types = set.createResource(uri("types.events"));
-		types.getContents().add(type);
-
-		for (Resource resource : set.getResources()) {
-			System.out.println(resource.getURI());
-			resource.save(Collections.emptyMap());
-		}
+		save();
 
 		// load
 		Resource resource = new ResourceSetImpl().getResource(uri("towns.events"), true);
@@ -57,41 +42,34 @@ public final class HelloWorldTest {
 		assertNotNull(loadedTown.getType());
 
 		assertEquals("Glorious opening", loadedTown.getType().getName());
+	}
 
+	private void save() throws IOException {
+		ResourceContent content = new ResourceContent();
+		
+		ResourceSet set = new ResourceSetImpl();
+
+		Resource towns = set.createResource(uri("towns.events"));
+		towns.getContents().addAll(content.towns);
+
+		Resource types = set.createResource(uri("types.events"));
+		types.getContents().addAll(content.types);
+		
+		Resource roads = set.createResource(uri("roads.events"));
+		roads.getContents().addAll(content.roads);
+		
+		Resource regions = set.createResource(uri("regions.events"));
+		regions.getContents().addAll(content.regions);
+
+		for (Resource resource : set.getResources()) {
+			System.out.println(resource.getURI());
+			resource.save(Collections.emptyMap());
+		}
 	}
 
 	private URI uri(String name) {
 		String location = System.getProperty("user.dir");
 		String dir = location.substring(0, location.lastIndexOf("\\"));
 		return URI.createFileURI(dir + "\\resources" + File.separator + name);
-	}
-
-	private List<Town> towns() {
-
-		return null;
-	}
-
-	private Town town(String name, Date start, TownType type) {
-		Town town = EventsFactory.eINSTANCE.createTown();
-		// town.setName("Торжественное открытие «»\r\n Яроцвета первого созыва");
-		town.setName(name);
-		// FIXME: add normal time
-		town.setStart(start);
-		town.setType(type);
-		return town;
-	}
-
-	private Town fullTown(String name, Date strat, TownType type, Date end) {
-		Town town = town(name, strat, type);
-		town.setEnd(end);
-		return town;
-	}
-
-	private TownType type(String name) {
-		TownType type = EventsFactory.eINSTANCE.createTownType();
-		// type.setName("Торжественное открытие");
-		type.setName(name);
-		// TODO: calculate type name with town name
-		return type;
 	}
 }

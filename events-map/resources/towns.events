@@ -1,9 +1,25 @@
-{
+[ {
   "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
-  "name" : "world",
-  "start" : "2024-05-05T10:51:34",
+  "name" : "Glorious opening of First Yarocvet session",
+  "start" : "1970-01-21T03:07:51",
   "type" : {
     "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//TownType",
-    "$ref" : "types.events#/"
+    "$ref" : "types.events#/0"
   }
-}
+}, {
+  "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
+  "name" : "Microplastic disaster at Finskiy Bay and Kotlin",
+  "start" : "1970-01-21T06:08:13",
+  "type" : {
+    "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//TownType",
+    "$ref" : "types.events#/1"
+  }
+}, {
+  "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
+  "name" : "Agronomical companies in Gatchinskiy Region",
+  "start" : "1970-01-21T06:42:46",
+  "type" : {
+    "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//TownType",
+    "$ref" : "types.events#/1"
+  }
+} ]
