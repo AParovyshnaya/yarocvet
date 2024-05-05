@@ -14,18 +14,38 @@ import ru.aparovyshnaia.yarocvet.events.model.meta.EventsFactory;
 
 final class ResourceContent {
 	
-	List<Town> towns;
-	List<TownType> types;
-	List<Road> roads;
-	List<Region> regions;
+	private final List<Town> towns;
+	private final List<TownType> types;
+	private final List<Road> roads;
+	private final List<Region> regions;
 
-	public ResourceContent() {
+	ResourceContent() {
 		this.towns = towns();
 		this.types = towns.stream().map(t -> t.getType()).toList();
 		this.roads = roads();
 		this.regions = regions();
 	}
 	
+	List<Town> getTowns() {
+		return towns;
+	}
+
+
+	List<TownType> getTypes() {
+		return types;
+	}
+
+
+	List<Road> getRoads() {
+		return roads;
+	}
+
+
+	List<Region> getRegions() {
+		return regions;
+	}
+
+
 	private List<Town> towns() {
 		TownType opening = type("Glorious opening");
 		TownType conference = type("Conference");

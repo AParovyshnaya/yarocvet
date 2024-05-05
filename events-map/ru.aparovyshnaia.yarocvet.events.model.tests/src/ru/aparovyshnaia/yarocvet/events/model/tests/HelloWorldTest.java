@@ -50,16 +50,16 @@ public final class HelloWorldTest {
 		ResourceSet set = new ResourceSetImpl();
 
 		Resource towns = set.createResource(uri("towns.events"));
-		towns.getContents().addAll(content.towns);
+		towns.getContents().addAll(content.getTowns());
 
 		Resource types = set.createResource(uri("types.events"));
-		types.getContents().addAll(content.types);
+		types.getContents().addAll(content.getTypes());
 		
 		Resource roads = set.createResource(uri("roads.events"));
-		roads.getContents().addAll(content.roads);
+		roads.getContents().addAll(content.getRoads());
 		
 		Resource regions = set.createResource(uri("regions.events"));
-		regions.getContents().addAll(content.regions);
+		regions.getContents().addAll(content.getRegions());
 
 		for (Resource resource : set.getResources()) {
 			System.out.println(resource.getURI());
