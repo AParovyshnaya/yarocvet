@@ -1,4 +1,4 @@
-let towns = [ {
+let data = [ {
   "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
   "name" : "Glorious opening of First Yarocvet session",
   "start" : "1970-01-21T03:07:51",

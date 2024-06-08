@@ -24,6 +24,7 @@
 	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 	crossorigin="anonymous">
 <link rel="newer stylesheet" href="css/main.css">
+<link rel="newer stylesheet" href="css/events-map.css">
 <script src="events-map/resources/towns.events"></script>
 <script src="events-map/renderer/fulcrum.js"></script>
 <script lang="js">
@@ -40,10 +41,10 @@
 		</div>
 	</div>
 	<div class="cause-to-participate container"></div>
-	<div class="events-map container-fluid"></div>
+	<div class="events-map container-fluid" id="canvas"></div>
 	<div class="contacts container text-center">
 		<div
-			class="row justify-content-end align-items-start row-cols-10 gx-2">
+			class="row justify-content-end align-items-start row-cols-10 gx-1">
 			<div class="col p-3 ms-md-4">
 				<iframe
 					src="https://yandex.ru/map-widget/v1/?um=constructor%3A869b5a8153179dc688568e78df8bc29755238ffd4f80ef285eb11bb9c50f4a36&amp;source=constructor"
@@ -54,10 +55,12 @@
 	<div class="footer container-fluid text-center">
 		<div
 			class="row justify-content-end align-items-start row-cols-10 gx-2">
-			<div class="col lg-1 p-1">
-				Не терпится сказать что-то про сайт? <a class="with-dark-phone"
-					href="https://github.com/AParovyshnaya/yarocvet/issues/new">Можем
-					обсудить техническую сторону вопроса!</a>
+			<div class="col lg-2 p-1">
+				С техническими ошибками и пожеланиями <a class="with-dark-phone"
+					href="https://github.com/AParovyshnaya/yarocvet/issues/new">пишите сюда</a>.
+			</div>
+			<div class="col lg-2 p-1">
+				[ здесь будут контакты организатора ]
 			</div>
 		</div>
 		<div class="container copyrights">
@@ -65,7 +68,7 @@
 				class="row justify-content-end align-items-start row-cols-10 gx-2">
 				<div class="col p-1 ms-md-4">
 					© 2024 <a class="with-dark-phone"
-						href="https::/github.com/aparovyshnaya">AParovyshnaya</a>
+						href="https://github.com/aparovyshnaya">AParovyshnaya</a>
 					(Анастасия Паровышная) — сайт (сейчас не работает корректно для
 					мобильных устройств), символика, изображения.
 				</div>
