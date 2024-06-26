@@ -7,7 +7,7 @@ body {
 }
 
 a {
-	text-decoration: none;
+	text-decoration: underline dotted;
 }
 
 a:hover {
@@ -59,7 +59,7 @@ a.with-dark-phone {
 }
 
 a.with-dark-phone:hover {
-	color: #F4442E;
+	text-decoration-color: #F4442E;
 }
 
 .copyrights {
