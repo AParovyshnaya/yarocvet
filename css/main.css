@@ -19,15 +19,44 @@ a:hover {
 }
 
 .gate {
-	height: 20vh;
+	height: 99vh;
 	margin-top: 1.5rem;
+	align-items: center;
 }
 
 .header {
-	
+	animation-name: greeting-level-up, greeting-color-burst;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
 }
 
+@keyframes greeting-level-up {
+  0% {
+	letter-spacing: normal;
+  }
+
+  50% {
+  	letter-spacing: .3rem;
+  }
+  
+  100% {
+  	letter-spacing: .5rem;
+  }
+}
+
+/*@keyframes greeting-color-burst {
+  0% {
+
+  }
+  100% {
+  background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+}*/
+
 .cause-to-participate {
+	text-size-adjust: 80%;
 	
 }
 
