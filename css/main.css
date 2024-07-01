@@ -9,15 +9,28 @@
   --invert-backgound-color: #020122;
 }
 
+html {
+	font-size: 62.5%;
+}
+
 @media (max-width: 700px) {
+	html {
+		font-size: 50%;
+	}
 	.main-description {
-		--greeting: none;
+		--greeting: greeting-small;
+	}
+	.gate {
+		--header-height: 33vh;
 	}
 }
 
 @media (min-width: 700px) {
 	.main-description {
 		--greeting: greeting;
+	}
+	.gate {
+		--header-height: 99vh;
 	}
 }
 
@@ -29,6 +42,7 @@
 
 body {
 	font-family: 'Montserrat';
+  	font-size: 2rem;
 /* 	-moz-hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
@@ -36,7 +50,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 10px;               /* ширина scrollbar */
+  width: 8px;               /* ширина scrollbar */
 }
 body::-webkit-scrollbar-track {
   background: #000f08;        /* цвет дорожки */
@@ -45,7 +59,6 @@ body::-webkit-scrollbar-thumb {
   background-color: #8A977D;    /* цвет плашки */
   border-radius: 5px;       /* закругления плашки */
   border: 2px solid #2E4057;  /* padding вокруг плашки */
-  animation: 10s easy-in-out infintive alternative color-burst; 
 }
 
 a {
@@ -57,19 +70,15 @@ a:hover {
 }
 
 .main-description {
- 	background-blend-mode: screen;
-	animation-name: greeting-background;
 	background-color: #000f08;
 }
 
-@keyframe greeting-background {
-	
-}
 
 .gate {
-	height: 99vh;
+	height: var(--header-height);
 /*	margin-top: 1.5rem;*/
 	align-items: center;
+	text-align: center
 }
 
 
@@ -83,11 +92,11 @@ a:hover {
   }
   
   10% {
-  	letter-spacing: 1rem;
+  	letter-spacing: .6rem;
   }
   
   100% {
-  	letter-spacing: 2rem;
+  	letter-spacing: 1.75rem;
   }
 }
 
@@ -133,10 +142,10 @@ a:hover {
 }
 
 @keyframes color-burst {
-    0% {
+    from {
         background-position: 0% 50%;
     }
-    100% {
+    to {
         background-position: 200% 50%;
     }
 }
