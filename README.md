@@ -1,4 +1,4 @@
-You can read Russian version [at this page](RUREADME.html).
+You can read Russian version [at this page](RUREADME.MD).
 
 # Yarocvet
 
