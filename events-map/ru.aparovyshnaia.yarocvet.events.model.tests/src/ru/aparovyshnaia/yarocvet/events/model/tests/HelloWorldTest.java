@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.util.URI;
@@ -19,8 +18,6 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.junit.jupiter.api.Test;
 
 import ru.aparovyshnaia.yarocvet.events.model.api.Town;
-import ru.aparovyshnaia.yarocvet.events.model.api.TownType;
-import ru.aparovyshnaia.yarocvet.events.model.meta.EventsFactory;
 
 public final class HelloWorldTest {
 

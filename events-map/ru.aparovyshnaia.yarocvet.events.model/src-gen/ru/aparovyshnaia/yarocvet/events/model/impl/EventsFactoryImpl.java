@@ -86,6 +86,8 @@ public class EventsFactoryImpl extends EFactoryImpl implements EventsFactory {
 				return createSRCFromString(eDataType, initialValue);
 			case EventsPackage.URL:
 				return createURLFromString(eDataType, initialValue);
+			case EventsPackage.PATH_NAME:
+				return createPathNameFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -105,6 +107,8 @@ public class EventsFactoryImpl extends EFactoryImpl implements EventsFactory {
 				return convertSRCToString(eDataType, instanceValue);
 			case EventsPackage.URL:
 				return convertURLToString(eDataType, instanceValue);
+			case EventsPackage.PATH_NAME:
+				return convertPathNameToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -229,6 +233,24 @@ public class EventsFactoryImpl extends EFactoryImpl implements EventsFactory {
 	 * @generated
 	 */
 	public String convertURLToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createPathNameFromString(EDataType eDataType, String initialValue) {
+		return (String)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertPathNameToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

@@ -295,7 +295,7 @@ public interface Town extends EObject {
 	 * @return the value of the '<em>Ref</em>' attribute.
 	 * @see #setRef(String)
 	 * @see ru.aparovyshnaia.yarocvet.events.model.meta.EventsPackage#getTown_Ref()
-	 * @model required="true"
+	 * @model dataType="ru.aparovyshnaia.yarocvet.events.model.api.PathName" required="true"
 	 * @generated
 	 */
 	String getRef();

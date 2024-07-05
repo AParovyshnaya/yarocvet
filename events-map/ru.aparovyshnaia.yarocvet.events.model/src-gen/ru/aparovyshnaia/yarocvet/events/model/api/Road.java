@@ -17,8 +17,10 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.Road#getTowns <em>Towns</em>}</li>
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.Road#getName <em>Name</em>}</li>
+ *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.Road#getDescription <em>Description</em>}</li>
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.Road#isFullAttendance <em>Full Attendance</em>}</li>
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.Road#isIteratable <em>Iteratable</em>}</li>
+ *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.Road#getRef <em>Ref</em>}</li>
  * </ul>
  *
  * @see ru.aparovyshnaia.yarocvet.events.model.meta.EventsPackage#getRoad()
@@ -59,6 +61,28 @@ public interface Road extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see ru.aparovyshnaia.yarocvet.events.model.meta.EventsPackage#getRoad_Description()
+	 * @model
+	 * @generated
+	 */
+	String getDescription();
+
+	/**
+	 * Sets the value of the '{@link ru.aparovyshnaia.yarocvet.events.model.api.Road#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Full Attendance</b></em>' attribute.
@@ -105,5 +129,27 @@ public interface Road extends EObject {
 	 * @generated
 	 */
 	void setIteratable(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ref</em>' attribute.
+	 * @see #setRef(String)
+	 * @see ru.aparovyshnaia.yarocvet.events.model.meta.EventsPackage#getRoad_Ref()
+	 * @model dataType="ru.aparovyshnaia.yarocvet.events.model.api.PathName"
+	 * @generated
+	 */
+	String getRef();
+
+	/**
+	 * Sets the value of the '{@link ru.aparovyshnaia.yarocvet.events.model.api.Road#getRef <em>Ref</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ref</em>' attribute.
+	 * @see #getRef()
+	 * @generated
+	 */
+	void setRef(String value);
 
 } // Road

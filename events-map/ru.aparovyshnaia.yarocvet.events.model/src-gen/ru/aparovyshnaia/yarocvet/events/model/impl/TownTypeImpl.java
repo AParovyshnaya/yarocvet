@@ -22,6 +22,7 @@ import ru.aparovyshnaia.yarocvet.events.model.meta.EventsPackage;
  * </p>
  * <ul>
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.impl.TownTypeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.impl.TownTypeImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,6 +47,26 @@ public class TownTypeImpl extends MinimalEObjectImpl.Container implements TownTy
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -95,10 +116,35 @@ public class TownTypeImpl extends MinimalEObjectImpl.Container implements TownTy
 	 * @generated
 	 */
 	@Override
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EventsPackage.TOWN_TYPE__DESCRIPTION, oldDescription, description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EventsPackage.TOWN_TYPE__NAME:
 				return getName();
+			case EventsPackage.TOWN_TYPE__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -113,6 +159,9 @@ public class TownTypeImpl extends MinimalEObjectImpl.Container implements TownTy
 		switch (featureID) {
 			case EventsPackage.TOWN_TYPE__NAME:
 				setName((String)newValue);
+				return;
+			case EventsPackage.TOWN_TYPE__DESCRIPTION:
+				setDescription((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -129,6 +178,9 @@ public class TownTypeImpl extends MinimalEObjectImpl.Container implements TownTy
 			case EventsPackage.TOWN_TYPE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case EventsPackage.TOWN_TYPE__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -143,6 +195,8 @@ public class TownTypeImpl extends MinimalEObjectImpl.Container implements TownTy
 		switch (featureID) {
 			case EventsPackage.TOWN_TYPE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case EventsPackage.TOWN_TYPE__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -159,6 +213,8 @@ public class TownTypeImpl extends MinimalEObjectImpl.Container implements TownTy
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", description: ");
+		result.append(description);
 		result.append(')');
 		return result.toString();
 	}

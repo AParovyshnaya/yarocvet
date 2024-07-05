@@ -93,6 +93,13 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 	private EDataType urlEDataType = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType pathNameEDataType = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -328,6 +335,16 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getTownType_Description() {
+		return (EAttribute)townTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getRegion() {
 		return regionEClass;
 	}
@@ -388,7 +405,7 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getRoad_FullAttendance() {
+	public EAttribute getRoad_Description() {
 		return (EAttribute)roadEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -398,8 +415,28 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getRoad_Iteratable() {
+	public EAttribute getRoad_FullAttendance() {
 		return (EAttribute)roadEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRoad_Iteratable() {
+		return (EAttribute)roadEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRoad_Ref() {
+		return (EAttribute)roadEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -518,6 +555,26 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getSpeaker_Job() {
+		return (EAttribute)speakerEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSpeaker_Place() {
+		return (EAttribute)speakerEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getParticipants() {
 		return participantsEEnum;
 	}
@@ -540,6 +597,16 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 	@Override
 	public EDataType getURL() {
 		return urlEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getPathName() {
+		return pathNameEDataType;
 	}
 
 	/**
@@ -589,6 +656,7 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 
 		townTypeEClass = createEClass(TOWN_TYPE);
 		createEAttribute(townTypeEClass, TOWN_TYPE__NAME);
+		createEAttribute(townTypeEClass, TOWN_TYPE__DESCRIPTION);
 
 		regionEClass = createEClass(REGION);
 		createEAttribute(regionEClass, REGION__NAME);
@@ -597,8 +665,10 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 		roadEClass = createEClass(ROAD);
 		createEReference(roadEClass, ROAD__TOWNS);
 		createEAttribute(roadEClass, ROAD__NAME);
+		createEAttribute(roadEClass, ROAD__DESCRIPTION);
 		createEAttribute(roadEClass, ROAD__FULL_ATTENDANCE);
 		createEAttribute(roadEClass, ROAD__ITERATABLE);
+		createEAttribute(roadEClass, ROAD__REF);
 
 		eventsMapEClass = createEClass(EVENTS_MAP);
 		createEReference(eventsMapEClass, EVENTS_MAP__TOWNS);
@@ -612,6 +682,8 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 		createEAttribute(speakerEClass, SPEAKER__NAME);
 		createEAttribute(speakerEClass, SPEAKER__PATRONYMIC);
 		createEAttribute(speakerEClass, SPEAKER__LINK);
+		createEAttribute(speakerEClass, SPEAKER__JOB);
+		createEAttribute(speakerEClass, SPEAKER__PLACE);
 
 		// Create enums
 		participantsEEnum = createEEnum(PARTICIPANTS);
@@ -619,6 +691,7 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 		// Create data types
 		srcEDataType = createEDataType(SRC);
 		urlEDataType = createEDataType(URL);
+		pathNameEDataType = createEDataType(PATH_NAME);
 	}
 
 	/**
@@ -664,11 +737,12 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 		initEAttribute(getTown_MaxClass(), ecorePackage.getEInt(), "maxClass", "1", 0, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTown_Participants(), this.getParticipants(), "participants", "Schoolchildren", 0, -1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTown_Speakers(), this.getSpeaker(), null, "speakers", null, 0, -1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTown_Ref(), ecorePackage.getEString(), "ref", null, 1, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTown_Ref(), this.getPathName(), "ref", null, 1, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTown_Type(), this.getTownType(), null, "type", null, 1, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(townTypeEClass, TownType.class, "TownType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTownType_Name(), ecorePackage.getEString(), "name", null, 1, 1, TownType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTownType_Description(), ecorePackage.getEString(), "description", null, 0, 1, TownType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(regionEClass, Region.class, "Region", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRegion_Name(), ecorePackage.getEString(), "name", null, 1, 1, Region.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -677,8 +751,10 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 		initEClass(roadEClass, Road.class, "Road", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoad_Towns(), this.getTown(), null, "towns", null, 1, -1, Road.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRoad_Name(), ecorePackage.getEString(), "name", null, 0, 1, Road.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoad_Description(), ecorePackage.getEString(), "description", null, 0, 1, Road.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRoad_FullAttendance(), ecorePackage.getEBoolean(), "fullAttendance", "false", 0, 1, Road.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRoad_Iteratable(), ecorePackage.getEBoolean(), "iteratable", "false", 0, 1, Road.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoad_Ref(), this.getPathName(), "ref", null, 0, 1, Road.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eventsMapEClass, EventsMap.class, "EventsMap", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEventsMap_Towns(), this.getTown(), null, "towns", null, 0, -1, EventsMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -692,6 +768,8 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 		initEAttribute(getSpeaker_Name(), ecorePackage.getEString(), "name", null, 1, 1, Speaker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpeaker_Patronymic(), ecorePackage.getEString(), "patronymic", null, 0, 1, Speaker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpeaker_Link(), this.getURL(), "link", "http://www.school617.spb.ru/kollektiv/", 1, 1, Speaker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSpeaker_Job(), ecorePackage.getEString(), "job", null, 0, 1, Speaker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSpeaker_Place(), ecorePackage.getEString(), "place", null, 0, 1, Speaker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(participantsEEnum, Participants.class, "Participants");
@@ -707,6 +785,7 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 		// Initialize data types
 		initEDataType(srcEDataType, String.class, "SRC", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(urlEDataType, java.net.URL.class, "URL", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(pathNameEDataType, String.class, "PathName", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

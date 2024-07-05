@@ -22,6 +22,7 @@
     </genEnums>
     <genDataTypes ecoreDataType="../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//SRC"/>
     <genDataTypes ecoreDataType="../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//URL"/>
+    <genDataTypes ecoreDataType="../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//PathName"/>
     <genClasses ecoreClass="../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Town">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Town/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Town/description"/>
@@ -40,6 +41,7 @@
     </genClasses>
     <genClasses ecoreClass="../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//TownType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//TownType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//TownType/description"/>
     </genClasses>
     <genClasses ecoreClass="../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Region">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Region/name"/>
@@ -48,8 +50,10 @@
     <genClasses ecoreClass="../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Road">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Road/towns"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Road/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Road/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Road/fullAttendance"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Road/iteratable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Road/ref"/>
     </genClasses>
     <genClasses ecoreClass="../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//EventsMap">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//EventsMap/towns"/>
@@ -63,6 +67,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Speaker/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Speaker/patronymic"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Speaker/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Speaker/job"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../ru.aparovyshnaia.yarocvet.events.ecore/model/events.ecore#//Speaker/place"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

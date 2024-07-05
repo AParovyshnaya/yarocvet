@@ -232,13 +232,22 @@ public interface EventsPackage extends EPackage {
 	int TOWN_TYPE__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOWN_TYPE__DESCRIPTION = 1;
+
+	/**
 	 * The number of structural features of the '<em>Town Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOWN_TYPE_FEATURE_COUNT = 1;
+	int TOWN_TYPE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Town Type</em>' class.
@@ -324,13 +333,22 @@ public interface EventsPackage extends EPackage {
 	int ROAD__NAME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROAD__DESCRIPTION = 2;
+
+	/**
 	 * The feature id for the '<em><b>Full Attendance</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROAD__FULL_ATTENDANCE = 2;
+	int ROAD__FULL_ATTENDANCE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Iteratable</b></em>' attribute.
@@ -339,7 +357,16 @@ public interface EventsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROAD__ITERATABLE = 3;
+	int ROAD__ITERATABLE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROAD__REF = 5;
 
 	/**
 	 * The number of structural features of the '<em>Road</em>' class.
@@ -348,7 +375,7 @@ public interface EventsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROAD_FEATURE_COUNT = 4;
+	int ROAD_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Road</em>' class.
@@ -480,13 +507,31 @@ public interface EventsPackage extends EPackage {
 	int SPEAKER__LINK = 3;
 
 	/**
+	 * The feature id for the '<em><b>Job</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPEAKER__JOB = 4;
+
+	/**
+	 * The feature id for the '<em><b>Place</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPEAKER__PLACE = 5;
+
+	/**
 	 * The number of structural features of the '<em>Speaker</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPEAKER_FEATURE_COUNT = 4;
+	int SPEAKER_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Speaker</em>' class.
@@ -526,6 +571,17 @@ public interface EventsPackage extends EPackage {
 	 * @generated
 	 */
 	int URL = 8;
+
+
+	/**
+	 * The meta object id for the '<em>Path Name</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see ru.aparovyshnaia.yarocvet.events.model.impl.EventsPackageImpl#getPathName()
+	 * @generated
+	 */
+	int PATH_NAME = 9;
 
 
 	/**
@@ -714,6 +770,17 @@ public interface EventsPackage extends EPackage {
 	EAttribute getTownType_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link ru.aparovyshnaia.yarocvet.events.model.api.TownType#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see ru.aparovyshnaia.yarocvet.events.model.api.TownType#getDescription()
+	 * @see #getTownType()
+	 * @generated
+	 */
+	EAttribute getTownType_Description();
+
+	/**
 	 * Returns the meta object for class '{@link ru.aparovyshnaia.yarocvet.events.model.api.Region <em>Region</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -778,6 +845,17 @@ public interface EventsPackage extends EPackage {
 	EAttribute getRoad_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link ru.aparovyshnaia.yarocvet.events.model.api.Road#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see ru.aparovyshnaia.yarocvet.events.model.api.Road#getDescription()
+	 * @see #getRoad()
+	 * @generated
+	 */
+	EAttribute getRoad_Description();
+
+	/**
 	 * Returns the meta object for the attribute '{@link ru.aparovyshnaia.yarocvet.events.model.api.Road#isFullAttendance <em>Full Attendance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -798,6 +876,17 @@ public interface EventsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRoad_Iteratable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ru.aparovyshnaia.yarocvet.events.model.api.Road#getRef <em>Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ref</em>'.
+	 * @see ru.aparovyshnaia.yarocvet.events.model.api.Road#getRef()
+	 * @see #getRoad()
+	 * @generated
+	 */
+	EAttribute getRoad_Ref();
 
 	/**
 	 * Returns the meta object for class '{@link ru.aparovyshnaia.yarocvet.events.model.api.EventsMap <em>Map</em>}'.
@@ -919,6 +1008,28 @@ public interface EventsPackage extends EPackage {
 	EAttribute getSpeaker_Link();
 
 	/**
+	 * Returns the meta object for the attribute '{@link ru.aparovyshnaia.yarocvet.events.model.api.Speaker#getJob <em>Job</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Job</em>'.
+	 * @see ru.aparovyshnaia.yarocvet.events.model.api.Speaker#getJob()
+	 * @see #getSpeaker()
+	 * @generated
+	 */
+	EAttribute getSpeaker_Job();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ru.aparovyshnaia.yarocvet.events.model.api.Speaker#getPlace <em>Place</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Place</em>'.
+	 * @see ru.aparovyshnaia.yarocvet.events.model.api.Speaker#getPlace()
+	 * @see #getSpeaker()
+	 * @generated
+	 */
+	EAttribute getSpeaker_Place();
+
+	/**
 	 * Returns the meta object for enum '{@link ru.aparovyshnaia.yarocvet.events.model.api.Participants <em>Participants</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -949,6 +1060,17 @@ public interface EventsPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getURL();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>Path Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Path Name</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 * @generated
+	 */
+	EDataType getPathName();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1114,6 +1236,14 @@ public interface EventsPackage extends EPackage {
 		EAttribute TOWN_TYPE__NAME = eINSTANCE.getTownType_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOWN_TYPE__DESCRIPTION = eINSTANCE.getTownType_Description();
+
+		/**
 		 * The meta object literal for the '{@link ru.aparovyshnaia.yarocvet.events.model.impl.RegionImpl <em>Region</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1166,6 +1296,14 @@ public interface EventsPackage extends EPackage {
 		EAttribute ROAD__NAME = eINSTANCE.getRoad_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROAD__DESCRIPTION = eINSTANCE.getRoad_Description();
+
+		/**
 		 * The meta object literal for the '<em><b>Full Attendance</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1180,6 +1318,14 @@ public interface EventsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROAD__ITERATABLE = eINSTANCE.getRoad_Iteratable();
+
+		/**
+		 * The meta object literal for the '<em><b>Ref</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROAD__REF = eINSTANCE.getRoad_Ref();
 
 		/**
 		 * The meta object literal for the '{@link ru.aparovyshnaia.yarocvet.events.model.impl.EventsMapImpl <em>Map</em>}' class.
@@ -1274,6 +1420,22 @@ public interface EventsPackage extends EPackage {
 		EAttribute SPEAKER__LINK = eINSTANCE.getSpeaker_Link();
 
 		/**
+		 * The meta object literal for the '<em><b>Job</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SPEAKER__JOB = eINSTANCE.getSpeaker_Job();
+
+		/**
+		 * The meta object literal for the '<em><b>Place</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SPEAKER__PLACE = eINSTANCE.getSpeaker_Place();
+
+		/**
 		 * The meta object literal for the '{@link ru.aparovyshnaia.yarocvet.events.model.api.Participants <em>Participants</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1302,6 +1464,16 @@ public interface EventsPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType URL = eINSTANCE.getURL();
+
+		/**
+		 * The meta object literal for the '<em>Path Name</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see ru.aparovyshnaia.yarocvet.events.model.impl.EventsPackageImpl#getPathName()
+		 * @generated
+		 */
+		EDataType PATH_NAME = eINSTANCE.getPathName();
 
 	}
 

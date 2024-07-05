@@ -19,6 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.Speaker#getName <em>Name</em>}</li>
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.Speaker#getPatronymic <em>Patronymic</em>}</li>
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.Speaker#getLink <em>Link</em>}</li>
+ *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.Speaker#getJob <em>Job</em>}</li>
+ *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.Speaker#getPlace <em>Place</em>}</li>
  * </ul>
  *
  * @see ru.aparovyshnaia.yarocvet.events.model.meta.EventsPackage#getSpeaker()
@@ -114,5 +116,49 @@ public interface Speaker extends EObject {
 	 * @generated
 	 */
 	void setLink(URL value);
+
+	/**
+	 * Returns the value of the '<em><b>Job</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Job</em>' attribute.
+	 * @see #setJob(String)
+	 * @see ru.aparovyshnaia.yarocvet.events.model.meta.EventsPackage#getSpeaker_Job()
+	 * @model
+	 * @generated
+	 */
+	String getJob();
+
+	/**
+	 * Sets the value of the '{@link ru.aparovyshnaia.yarocvet.events.model.api.Speaker#getJob <em>Job</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Job</em>' attribute.
+	 * @see #getJob()
+	 * @generated
+	 */
+	void setJob(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Place</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Place</em>' attribute.
+	 * @see #setPlace(String)
+	 * @see ru.aparovyshnaia.yarocvet.events.model.meta.EventsPackage#getSpeaker_Place()
+	 * @model
+	 * @generated
+	 */
+	String getPlace();
+
+	/**
+	 * Sets the value of the '{@link ru.aparovyshnaia.yarocvet.events.model.api.Speaker#getPlace <em>Place</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Place</em>' attribute.
+	 * @see #getPlace()
+	 * @generated
+	 */
+	void setPlace(String value);
 
 } // Speaker

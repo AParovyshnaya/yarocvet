@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.TownType#getName <em>Name</em>}</li>
+ *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.TownType#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @see ru.aparovyshnaia.yarocvet.events.model.meta.EventsPackage#getTownType()
@@ -42,5 +43,27 @@ public interface TownType extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see ru.aparovyshnaia.yarocvet.events.model.meta.EventsPackage#getTownType_Description()
+	 * @model
+	 * @generated
+	 */
+	String getDescription();
+
+	/**
+	 * Sets the value of the '{@link ru.aparovyshnaia.yarocvet.events.model.api.TownType#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(String value);
 
 } // TownType

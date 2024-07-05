@@ -3,9 +3,6 @@ package ru.aparovyshnaia.yarocvet.events.model.tests;
 import java.util.Date;
 import java.util.List;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EStructuralFeature;
-
 import ru.aparovyshnaia.yarocvet.events.model.api.Region;
 import ru.aparovyshnaia.yarocvet.events.model.api.Road;
 import ru.aparovyshnaia.yarocvet.events.model.api.Town;

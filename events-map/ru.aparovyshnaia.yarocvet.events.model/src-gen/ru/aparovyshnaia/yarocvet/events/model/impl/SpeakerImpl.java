@@ -28,6 +28,8 @@ import ru.aparovyshnaia.yarocvet.events.model.meta.EventsPackage;
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.impl.SpeakerImpl#getName <em>Name</em>}</li>
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.impl.SpeakerImpl#getPatronymic <em>Patronymic</em>}</li>
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.impl.SpeakerImpl#getLink <em>Link</em>}</li>
+ *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.impl.SpeakerImpl#getJob <em>Job</em>}</li>
+ *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.impl.SpeakerImpl#getPlace <em>Place</em>}</li>
  * </ul>
  *
  * @generated
@@ -112,6 +114,46 @@ public class SpeakerImpl extends MinimalEObjectImpl.Container implements Speaker
 	 * @ordered
 	 */
 	protected URL link = LINK_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getJob() <em>Job</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getJob()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String JOB_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getJob() <em>Job</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getJob()
+	 * @generated
+	 * @ordered
+	 */
+	protected String job = JOB_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPlace() <em>Place</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlace()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PLACE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPlace() <em>Place</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlace()
+	 * @generated
+	 * @ordered
+	 */
+	protected String place = PLACE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -230,6 +272,52 @@ public class SpeakerImpl extends MinimalEObjectImpl.Container implements Speaker
 	 * @generated
 	 */
 	@Override
+	public String getJob() {
+		return job;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setJob(String newJob) {
+		String oldJob = job;
+		job = newJob;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EventsPackage.SPEAKER__JOB, oldJob, job));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getPlace() {
+		return place;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPlace(String newPlace) {
+		String oldPlace = place;
+		place = newPlace;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EventsPackage.SPEAKER__PLACE, oldPlace, place));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EventsPackage.SPEAKER__SURNAME:
@@ -240,6 +328,10 @@ public class SpeakerImpl extends MinimalEObjectImpl.Container implements Speaker
 				return getPatronymic();
 			case EventsPackage.SPEAKER__LINK:
 				return getLink();
+			case EventsPackage.SPEAKER__JOB:
+				return getJob();
+			case EventsPackage.SPEAKER__PLACE:
+				return getPlace();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -263,6 +355,12 @@ public class SpeakerImpl extends MinimalEObjectImpl.Container implements Speaker
 				return;
 			case EventsPackage.SPEAKER__LINK:
 				setLink((URL)newValue);
+				return;
+			case EventsPackage.SPEAKER__JOB:
+				setJob((String)newValue);
+				return;
+			case EventsPackage.SPEAKER__PLACE:
+				setPlace((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -288,6 +386,12 @@ public class SpeakerImpl extends MinimalEObjectImpl.Container implements Speaker
 			case EventsPackage.SPEAKER__LINK:
 				setLink(LINK_EDEFAULT);
 				return;
+			case EventsPackage.SPEAKER__JOB:
+				setJob(JOB_EDEFAULT);
+				return;
+			case EventsPackage.SPEAKER__PLACE:
+				setPlace(PLACE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -308,6 +412,10 @@ public class SpeakerImpl extends MinimalEObjectImpl.Container implements Speaker
 				return PATRONYMIC_EDEFAULT == null ? patronymic != null : !PATRONYMIC_EDEFAULT.equals(patronymic);
 			case EventsPackage.SPEAKER__LINK:
 				return LINK_EDEFAULT == null ? link != null : !LINK_EDEFAULT.equals(link);
+			case EventsPackage.SPEAKER__JOB:
+				return JOB_EDEFAULT == null ? job != null : !JOB_EDEFAULT.equals(job);
+			case EventsPackage.SPEAKER__PLACE:
+				return PLACE_EDEFAULT == null ? place != null : !PLACE_EDEFAULT.equals(place);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -330,6 +438,10 @@ public class SpeakerImpl extends MinimalEObjectImpl.Container implements Speaker
 		result.append(patronymic);
 		result.append(", link: ");
 		result.append(link);
+		result.append(", job: ");
+		result.append(job);
+		result.append(", place: ");
+		result.append(place);
 		result.append(')');
 		return result.toString();
 	}

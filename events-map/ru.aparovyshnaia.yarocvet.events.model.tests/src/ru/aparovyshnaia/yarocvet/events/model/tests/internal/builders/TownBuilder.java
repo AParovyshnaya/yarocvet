@@ -1,4 +1,4 @@
-package ru.aparovyshnaia.yarocvet.events.model.tests;
+package ru.aparovyshnaia.yarocvet.events.model.tests.internal.builders;
 
 import java.util.Date;
 import java.util.List;
@@ -26,7 +26,7 @@ final class TownBuilder {
 	private String ref = "";
 	private TownType type;
 	
-	Town createComplexClass() {
+	Town createTown() {
 		Town town = EventsFactory.eINSTANCE.createTown();
 		town.setName(name);
 		town.setDescription(description);
@@ -95,7 +95,7 @@ final class TownBuilder {
 		this.participants = participants;
 		return this;
 	}
-	TownBuilder withSpeaker(List<Speaker> speaker) {
+	TownBuilder withSpeakers(List<Speaker> speaker) {
 		this.speaker = speaker;
 		return this;
 	}
