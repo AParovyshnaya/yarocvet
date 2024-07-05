@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EFactory;
 import ru.aparovyshnaia.yarocvet.events.model.api.EventsMap;
 import ru.aparovyshnaia.yarocvet.events.model.api.Region;
 import ru.aparovyshnaia.yarocvet.events.model.api.Road;
+import ru.aparovyshnaia.yarocvet.events.model.api.Speaker;
 import ru.aparovyshnaia.yarocvet.events.model.api.Town;
 import ru.aparovyshnaia.yarocvet.events.model.api.TownType;
 
@@ -71,6 +72,15 @@ public interface EventsFactory extends EFactory {
 	 * @generated
 	 */
 	EventsMap createEventsMap();
+
+	/**
+	 * Returns a new object of class '<em>Speaker</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Speaker</em>'.
+	 * @generated
+	 */
+	Speaker createSpeaker();
 
 	/**
 	 * Returns the package supported by this factory.

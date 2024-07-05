@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
  * <!-- begin-user-doc -->
  * The <b>Resource Factory</b> associated with the package.
  * <!-- end-user-doc -->
- * @see ru.aparovyshnaia.yarocvet.events.model.util.EventsJsonResourceImpl
+ * @see ru.aparovyshnaia.yarocvet.events.model.util.EventsResourceImpl
  * @generated
  */
 public class EventsResourceFactoryImpl extends ResourceFactoryImpl {

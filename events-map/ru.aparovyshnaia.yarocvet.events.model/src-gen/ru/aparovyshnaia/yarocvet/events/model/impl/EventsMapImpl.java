@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import ru.aparovyshnaia.yarocvet.events.model.api.EventsMap;
 import ru.aparovyshnaia.yarocvet.events.model.api.Region;
 import ru.aparovyshnaia.yarocvet.events.model.api.Road;
+import ru.aparovyshnaia.yarocvet.events.model.api.Speaker;
 import ru.aparovyshnaia.yarocvet.events.model.api.Town;
 import ru.aparovyshnaia.yarocvet.events.model.api.TownType;
 
@@ -36,6 +37,7 @@ import ru.aparovyshnaia.yarocvet.events.model.meta.EventsPackage;
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.impl.EventsMapImpl#getTypes <em>Types</em>}</li>
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.impl.EventsMapImpl#getRegions <em>Regions</em>}</li>
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.impl.EventsMapImpl#getRoads <em>Roads</em>}</li>
+ *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.impl.EventsMapImpl#getSpeakers <em>Speakers</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,6 +82,16 @@ public class EventsMapImpl extends MinimalEObjectImpl.Container implements Event
 	 * @ordered
 	 */
 	protected EList<Road> roads;
+
+	/**
+	 * The cached value of the '{@link #getSpeakers() <em>Speakers</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSpeakers()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Speaker> speakers;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -158,6 +170,19 @@ public class EventsMapImpl extends MinimalEObjectImpl.Container implements Event
 	 * @generated
 	 */
 	@Override
+	public EList<Speaker> getSpeakers() {
+		if (speakers == null) {
+			speakers = new EObjectContainmentEList<Speaker>(Speaker.class, this, EventsPackage.EVENTS_MAP__SPEAKERS);
+		}
+		return speakers;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case EventsPackage.EVENTS_MAP__TOWNS:
@@ -168,6 +193,8 @@ public class EventsMapImpl extends MinimalEObjectImpl.Container implements Event
 				return ((InternalEList<?>)getRegions()).basicRemove(otherEnd, msgs);
 			case EventsPackage.EVENTS_MAP__ROADS:
 				return ((InternalEList<?>)getRoads()).basicRemove(otherEnd, msgs);
+			case EventsPackage.EVENTS_MAP__SPEAKERS:
+				return ((InternalEList<?>)getSpeakers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -188,6 +215,8 @@ public class EventsMapImpl extends MinimalEObjectImpl.Container implements Event
 				return getRegions();
 			case EventsPackage.EVENTS_MAP__ROADS:
 				return getRoads();
+			case EventsPackage.EVENTS_MAP__SPEAKERS:
+				return getSpeakers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -217,6 +246,10 @@ public class EventsMapImpl extends MinimalEObjectImpl.Container implements Event
 				getRoads().clear();
 				getRoads().addAll((Collection<? extends Road>)newValue);
 				return;
+			case EventsPackage.EVENTS_MAP__SPEAKERS:
+				getSpeakers().clear();
+				getSpeakers().addAll((Collection<? extends Speaker>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -241,6 +274,9 @@ public class EventsMapImpl extends MinimalEObjectImpl.Container implements Event
 			case EventsPackage.EVENTS_MAP__ROADS:
 				getRoads().clear();
 				return;
+			case EventsPackage.EVENTS_MAP__SPEAKERS:
+				getSpeakers().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -261,6 +297,8 @@ public class EventsMapImpl extends MinimalEObjectImpl.Container implements Event
 				return regions != null && !regions.isEmpty();
 			case EventsPackage.EVENTS_MAP__ROADS:
 				return roads != null && !roads.isEmpty();
+			case EventsPackage.EVENTS_MAP__SPEAKERS:
+				return speakers != null && !speakers.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

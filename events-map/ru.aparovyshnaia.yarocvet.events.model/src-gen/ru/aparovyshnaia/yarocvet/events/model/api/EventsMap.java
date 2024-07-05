@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.EventsMap#getTypes <em>Types</em>}</li>
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.EventsMap#getRegions <em>Regions</em>}</li>
  *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.EventsMap#getRoads <em>Roads</em>}</li>
+ *   <li>{@link ru.aparovyshnaia.yarocvet.events.model.api.EventsMap#getSpeakers <em>Speakers</em>}</li>
  * </ul>
  *
  * @see ru.aparovyshnaia.yarocvet.events.model.meta.EventsPackage#getEventsMap()
@@ -73,5 +74,17 @@ public interface EventsMap extends EObject {
 	 * @generated
 	 */
 	EList<Road> getRoads();
+
+	/**
+	 * Returns the value of the '<em><b>Speakers</b></em>' containment reference list.
+	 * The list contents are of type {@link ru.aparovyshnaia.yarocvet.events.model.api.Speaker}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Speakers</em>' containment reference list.
+	 * @see ru.aparovyshnaia.yarocvet.events.model.meta.EventsPackage#getEventsMap_Speakers()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Speaker> getSpeakers();
 
 } // EventsMap

@@ -18,6 +18,7 @@
       <!-- @generated events -->
       <parser
             type="events"
-            class="ru.aparovyshnaia.yarocvet.events.model.util.EventsJsonResourceFactoryImpl"/>
+            class="ru.aparovyshnaia.yarocvet.events.model.util.EventsResourceFactoryImpl"/>
    </extension>
+
 </plugin>

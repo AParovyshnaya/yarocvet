@@ -2,7 +2,9 @@
  */
 package ru.aparovyshnaia.yarocvet.events.model.impl;
 
+import java.net.URL;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -64,8 +66,47 @@ public class EventsFactoryImpl extends EFactoryImpl implements EventsFactory {
 			case EventsPackage.REGION: return createRegion();
 			case EventsPackage.ROAD: return createRoad();
 			case EventsPackage.EVENTS_MAP: return createEventsMap();
+			case EventsPackage.SPEAKER: return createSpeaker();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case EventsPackage.PARTICIPANTS:
+				return createParticipantsFromString(eDataType, initialValue);
+			case EventsPackage.SRC:
+				return createSRCFromString(eDataType, initialValue);
+			case EventsPackage.URL:
+				return createURLFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case EventsPackage.PARTICIPANTS:
+				return convertParticipantsToString(eDataType, instanceValue);
+			case EventsPackage.SRC:
+				return convertSRCToString(eDataType, instanceValue);
+			case EventsPackage.URL:
+				return convertURLToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -122,6 +163,73 @@ public class EventsFactoryImpl extends EFactoryImpl implements EventsFactory {
 	public EventsMap createEventsMap() {
 		EventsMapImpl eventsMap = new EventsMapImpl();
 		return eventsMap;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Speaker createSpeaker() {
+		SpeakerImpl speaker = new SpeakerImpl();
+		return speaker;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Participants createParticipantsFromString(EDataType eDataType, String initialValue) {
+		Participants result = Participants.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertParticipantsToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createSRCFromString(EDataType eDataType, String initialValue) {
+		return (String)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertSRCToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public URL createURLFromString(EDataType eDataType, String initialValue) {
+		return (URL)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertURLToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

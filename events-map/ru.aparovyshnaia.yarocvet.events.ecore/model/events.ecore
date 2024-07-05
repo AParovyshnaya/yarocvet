@@ -3,8 +3,25 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="events" nsURI="http://ru.aparovyshnaia/events/0.1.0" nsPrefix="events">
   <eClassifiers xsi:type="ecore:EClass" name="Town">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="image" eType="#//SRC" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alt" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="start" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minAge" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxAge" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="participants" upperBound="-1"
+        eType="#//Participants" defaultValueLiteral="Schoolchildren"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="speakers" upperBound="-1"
+        eType="#//Speaker"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ref" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//TownType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TownType">
@@ -18,6 +35,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="Road">
     <eStructuralFeatures xsi:type="ecore:EReference" name="towns" lowerBound="1" upperBound="-1"
         eType="#//Town"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fullAttendance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="iteratable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EventsMap">
     <eStructuralFeatures xsi:type="ecore:EReference" name="towns" upperBound="-1"
@@ -28,5 +50,29 @@
         eType="#//Region" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="roads" upperBound="-1"
         eType="#//Road" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="speakers" upperBound="-1"
+        eType="#//Speaker" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Participants">
+    <eLiterals name="Schoolchildren"/>
+    <eLiterals name="Teachers" value="1"/>
+    <eLiterals name="Preschoolers" value="2"/>
+    <eLiterals name="Parents" value="3"/>
+    <eLiterals name="CollegeStudents" value="4"/>
+    <eLiterals name="UnivercityStudents" value="5"/>
+    <eLiterals name="Scientists" value="6"/>
+    <eLiterals name="Officials" value="7"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Speaker">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="surname" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="patronymic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="link" lowerBound="1" eType="#//URL"
+        defaultValueLiteral="http://www.school617.spb.ru/kollektiv/"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="job" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="SRC" instanceClassName="java.lang.String"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="URL" instanceClassName="java.net.URL"/>
 </ecore:EPackage>

@@ -1,4 +1,4 @@
-{
+[{
   "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Road",
   "towns" : [ {
     "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
@@ -7,4 +7,4 @@
     "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
     "$ref" : "towns.events#/2"
   } ]
-}
+}]

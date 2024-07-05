@@ -21,8 +21,7 @@ import ru.aparovyshnaia.yarocvet.events.model.api.Town;
 
 import ru.aparovyshnaia.yarocvet.events.model.meta.EventsFactory;
 import ru.aparovyshnaia.yarocvet.events.model.meta.EventsPackage;
-
-import ru.aparovyshnaia.yarocvet.events.model.util.EventsJsonResourceFactoryImpl;
+import ru.aparovyshnaia.yarocvet.events.model.util.EventsResourceFactoryImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,7 +46,7 @@ public class EventsExample {
 		//
 		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put
 			(Resource.Factory.Registry.DEFAULT_EXTENSION, 
-			 new EventsJsonResourceFactoryImpl());
+			 new EventsResourceFactoryImpl());
 
 		// Register the package to ensure it is available during loading.
 		//

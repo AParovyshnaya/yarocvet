@@ -4,14 +4,18 @@ package ru.aparovyshnaia.yarocvet.events.model.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import ru.aparovyshnaia.yarocvet.events.model.api.EventsMap;
+import ru.aparovyshnaia.yarocvet.events.model.api.Participants;
 import ru.aparovyshnaia.yarocvet.events.model.api.Region;
 import ru.aparovyshnaia.yarocvet.events.model.api.Road;
+import ru.aparovyshnaia.yarocvet.events.model.api.Speaker;
 import ru.aparovyshnaia.yarocvet.events.model.api.Town;
 import ru.aparovyshnaia.yarocvet.events.model.api.TownType;
 
@@ -59,6 +63,34 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 	 * @generated
 	 */
 	private EClass eventsMapEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass speakerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum participantsEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType srcEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType urlEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -146,7 +178,7 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTown_Start() {
+	public EAttribute getTown_Description() {
 		return (EAttribute)townEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -156,7 +188,7 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTown_End() {
+	public EAttribute getTown_Image() {
 		return (EAttribute)townEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -166,8 +198,108 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getTown_Alt() {
+		return (EAttribute)townEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTown_Start() {
+		return (EAttribute)townEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTown_End() {
+		return (EAttribute)townEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTown_MinAge() {
+		return (EAttribute)townEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTown_MaxAge() {
+		return (EAttribute)townEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTown_MinClass() {
+		return (EAttribute)townEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTown_MaxClass() {
+		return (EAttribute)townEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTown_Participants() {
+		return (EAttribute)townEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTown_Speakers() {
+		return (EReference)townEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTown_Ref() {
+		return (EAttribute)townEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EReference getTown_Type() {
-		return (EReference)townEClass.getEStructuralFeatures().get(3);
+		return (EReference)townEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -246,6 +378,36 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getRoad_Name() {
+		return (EAttribute)roadEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRoad_FullAttendance() {
+		return (EAttribute)roadEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRoad_Iteratable() {
+		return (EAttribute)roadEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getEventsMap() {
 		return eventsMapEClass;
 	}
@@ -296,6 +458,96 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getEventsMap_Speakers() {
+		return (EReference)eventsMapEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSpeaker() {
+		return speakerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSpeaker_Surname() {
+		return (EAttribute)speakerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSpeaker_Name() {
+		return (EAttribute)speakerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSpeaker_Patronymic() {
+		return (EAttribute)speakerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSpeaker_Link() {
+		return (EAttribute)speakerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getParticipants() {
+		return participantsEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getSRC() {
+		return srcEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getURL() {
+		return urlEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EventsFactory getEventsFactory() {
 		return (EventsFactory)getEFactoryInstance();
 	}
@@ -321,8 +573,18 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 		// Create classes and their features
 		townEClass = createEClass(TOWN);
 		createEAttribute(townEClass, TOWN__NAME);
+		createEAttribute(townEClass, TOWN__DESCRIPTION);
+		createEAttribute(townEClass, TOWN__IMAGE);
+		createEAttribute(townEClass, TOWN__ALT);
 		createEAttribute(townEClass, TOWN__START);
 		createEAttribute(townEClass, TOWN__END);
+		createEAttribute(townEClass, TOWN__MIN_AGE);
+		createEAttribute(townEClass, TOWN__MAX_AGE);
+		createEAttribute(townEClass, TOWN__MIN_CLASS);
+		createEAttribute(townEClass, TOWN__MAX_CLASS);
+		createEAttribute(townEClass, TOWN__PARTICIPANTS);
+		createEReference(townEClass, TOWN__SPEAKERS);
+		createEAttribute(townEClass, TOWN__REF);
 		createEReference(townEClass, TOWN__TYPE);
 
 		townTypeEClass = createEClass(TOWN_TYPE);
@@ -334,12 +596,29 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 
 		roadEClass = createEClass(ROAD);
 		createEReference(roadEClass, ROAD__TOWNS);
+		createEAttribute(roadEClass, ROAD__NAME);
+		createEAttribute(roadEClass, ROAD__FULL_ATTENDANCE);
+		createEAttribute(roadEClass, ROAD__ITERATABLE);
 
 		eventsMapEClass = createEClass(EVENTS_MAP);
 		createEReference(eventsMapEClass, EVENTS_MAP__TOWNS);
 		createEReference(eventsMapEClass, EVENTS_MAP__TYPES);
 		createEReference(eventsMapEClass, EVENTS_MAP__REGIONS);
 		createEReference(eventsMapEClass, EVENTS_MAP__ROADS);
+		createEReference(eventsMapEClass, EVENTS_MAP__SPEAKERS);
+
+		speakerEClass = createEClass(SPEAKER);
+		createEAttribute(speakerEClass, SPEAKER__SURNAME);
+		createEAttribute(speakerEClass, SPEAKER__NAME);
+		createEAttribute(speakerEClass, SPEAKER__PATRONYMIC);
+		createEAttribute(speakerEClass, SPEAKER__LINK);
+
+		// Create enums
+		participantsEEnum = createEEnum(PARTICIPANTS);
+
+		// Create data types
+		srcEDataType = createEDataType(SRC);
+		urlEDataType = createEDataType(URL);
 	}
 
 	/**
@@ -374,8 +653,18 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 		// Initialize classes, features, and operations; add parameters
 		initEClass(townEClass, Town.class, "Town", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTown_Name(), ecorePackage.getEString(), "name", null, 1, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTown_Description(), ecorePackage.getEString(), "description", null, 1, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTown_Image(), this.getSRC(), "image", "", 0, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTown_Alt(), ecorePackage.getEString(), "alt", null, 1, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTown_Start(), ecorePackage.getEDate(), "start", null, 1, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTown_End(), ecorePackage.getEDate(), "end", null, 0, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTown_MinAge(), ecorePackage.getEInt(), "minAge", "1", 0, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTown_MaxAge(), ecorePackage.getEInt(), "maxAge", "1", 0, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTown_MinClass(), ecorePackage.getEInt(), "minClass", "1", 0, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTown_MaxClass(), ecorePackage.getEInt(), "maxClass", "1", 0, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTown_Participants(), this.getParticipants(), "participants", "Schoolchildren", 0, -1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTown_Speakers(), this.getSpeaker(), null, "speakers", null, 0, -1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTown_Ref(), ecorePackage.getEString(), "ref", null, 1, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTown_Type(), this.getTownType(), null, "type", null, 1, 1, Town.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(townTypeEClass, TownType.class, "TownType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -387,12 +676,37 @@ public class EventsPackageImpl extends EPackageImpl implements EventsPackage {
 
 		initEClass(roadEClass, Road.class, "Road", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoad_Towns(), this.getTown(), null, "towns", null, 1, -1, Road.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoad_Name(), ecorePackage.getEString(), "name", null, 0, 1, Road.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoad_FullAttendance(), ecorePackage.getEBoolean(), "fullAttendance", "false", 0, 1, Road.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoad_Iteratable(), ecorePackage.getEBoolean(), "iteratable", "false", 0, 1, Road.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eventsMapEClass, EventsMap.class, "EventsMap", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEventsMap_Towns(), this.getTown(), null, "towns", null, 0, -1, EventsMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEventsMap_Types(), this.getTownType(), null, "types", null, 0, -1, EventsMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEventsMap_Regions(), this.getRegion(), null, "regions", null, 0, -1, EventsMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEventsMap_Roads(), this.getRoad(), null, "roads", null, 0, -1, EventsMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEventsMap_Speakers(), this.getSpeaker(), null, "speakers", null, 0, -1, EventsMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(speakerEClass, Speaker.class, "Speaker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSpeaker_Surname(), ecorePackage.getEString(), "surname", null, 1, 1, Speaker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSpeaker_Name(), ecorePackage.getEString(), "name", null, 1, 1, Speaker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSpeaker_Patronymic(), ecorePackage.getEString(), "patronymic", null, 0, 1, Speaker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSpeaker_Link(), this.getURL(), "link", "http://www.school617.spb.ru/kollektiv/", 1, 1, Speaker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(participantsEEnum, Participants.class, "Participants");
+		addEEnumLiteral(participantsEEnum, Participants.SCHOOLCHILDREN);
+		addEEnumLiteral(participantsEEnum, Participants.TEACHERS);
+		addEEnumLiteral(participantsEEnum, Participants.PRESCHOOLERS);
+		addEEnumLiteral(participantsEEnum, Participants.PARENTS);
+		addEEnumLiteral(participantsEEnum, Participants.COLLEGE_STUDENTS);
+		addEEnumLiteral(participantsEEnum, Participants.UNIVERCITY_STUDENTS);
+		addEEnumLiteral(participantsEEnum, Participants.SCIENTISTS);
+		addEEnumLiteral(participantsEEnum, Participants.OFFICIALS);
+
+		// Initialize data types
+		initEDataType(srcEDataType, String.class, "SRC", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(urlEDataType, java.net.URL.class, "URL", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
