@@ -9,7 +9,7 @@ import ru.aparovyshnaia.yarocvet.events.model.api.Town;
 import ru.aparovyshnaia.yarocvet.events.model.api.TownType;
 import ru.aparovyshnaia.yarocvet.events.model.meta.EventsFactory;
 
-final class TownBuilder {
+public final class TownBuilder {
 	
 	private String name = "Time X: nothing find.";
 	private String description = "You don't fill the gaps. Please try again. It's very instresting to describe blank filed. ~Do you any guilty conscience?~. Please use [infostyle](https://glvrd.ru/). \n You can create new line by combining symbols _n_ and _\\_! Also you can styling text: avalibale hightlighting and italic. Use this opportunity wisly.";
@@ -26,7 +26,7 @@ final class TownBuilder {
 	private String ref = "";
 	private TownType type;
 	
-	Town createTown() {
+	public Town createTown() {
 		Town town = EventsFactory.eINSTANCE.createTown();
 		town.setName(name);
 		town.setDescription(description);
@@ -45,61 +45,61 @@ final class TownBuilder {
 		return town;
 	}
 	
-	TownBuilder describe(String name, String description, String ref) {
+	public TownBuilder describe(String name, String description, String ref) {
 		this.name = name;
 		this.description = description;
 		this.ref = ref;
 		return this;
 	}
-	TownBuilder illustrate(String src, String alt) {
+	public TownBuilder illustrate(String src, String alt) {
 		this.image = src;
 		this.alt = alt;
 		return this;
 	}
-	TownBuilder date(Date start) {
+	public TownBuilder date(Date start) {
 		this.start = start;
 		return this;
 	}
-	TownBuilder period(Date start, Date end) {
+	public TownBuilder period(Date start, Date end) {
 		this.start = start;
 		this.end = end;
 		return this;
 	}
-	TownBuilder ages(int minAge, int maxAge) {
+	public TownBuilder ages(int minAge, int maxAge) {
 		this.minAge = minAge;
 		this.maxAge = maxAge;
 		return this;
 	}
-	TownBuilder withMinAge(int minAge) {
+	public TownBuilder withMinAge(int minAge) {
 		this.minAge = minAge;
 		return this;
 	}
-	TownBuilder withMaxAge(int maxAge) {
+	public TownBuilder withMaxAge(int maxAge) {
 		this.maxAge = maxAge;
 		return this;
 	}
-	TownBuilder withMinClass(int minClass) {
+	public TownBuilder withMinClass(int minClass) {
 		this.minClass = minClass;
 		return this;
 	}
-	TownBuilder withMaxClass(int maxClass) {
+	public TownBuilder withMaxClass(int maxClass) {
 		this.maxClass = maxClass;
 		return this;
 	}
-	TownBuilder classes(int minClass, int maxClass) {
+	public TownBuilder classes(int minClass, int maxClass) {
 		this.minClass = minClass;
 		this.maxClass = maxClass;
 		return this;
 	}
-	TownBuilder withParticipants(List<Participants> participants) {
+	public TownBuilder withParticipants(List<Participants> participants) {
 		this.participants = participants;
 		return this;
 	}
-	TownBuilder withSpeakers(List<Speaker> speaker) {
+	public TownBuilder withSpeakers(List<Speaker> speaker) {
 		this.speaker = speaker;
 		return this;
 	}
-	TownBuilder withType(TownType type) {
+	public TownBuilder withType(TownType type) {
 		this.type = type;
 		return this;
 	}

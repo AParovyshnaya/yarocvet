@@ -6,7 +6,7 @@ import java.net.URL;
 import ru.aparovyshnaia.yarocvet.events.model.api.Speaker;
 import ru.aparovyshnaia.yarocvet.events.model.meta.EventsFactory;
 
-final class SpeakerBuilder {
+public final class SpeakerBuilder {
 	
 	private String surname = "Kovalevskaia";
 	private String name = "Sofia";
@@ -24,26 +24,7 @@ final class SpeakerBuilder {
 		return null;
 	}
 
-	SpeakerBuilder present(String surname, String name, URL link) {
-		this.surname = surname;
-		this.name = name;
-		this.link = link;
-		return this;
-	}
-	SpeakerBuilder present(String surname, String name, String patronymic, URL link) {
-		this.surname = surname;
-		this.name = name;
-		this.patronymic = patronymic;
-		this.link = link;
-		return this;
-	}
-	SpeakerBuilder job(String job, String place) {
-		this.job = job;
-		this.place = place;
-		return this;
-	}
-	
-	Speaker createSpeaker() {
+	public Speaker createSpeaker() {
 		Speaker speaker = EventsFactory.eINSTANCE.createSpeaker();
 		speaker.setSurname(surname);
 		speaker.setName(name);
@@ -53,4 +34,24 @@ final class SpeakerBuilder {
 		speaker.setPlace(place);
 		return speaker;
 	}
+	
+	public SpeakerBuilder present(String surname, String name, URL link) {
+		this.surname = surname;
+		this.name = name;
+		this.link = link;
+		return this;
+	}
+	public SpeakerBuilder present(String surname, String name, String patronymic, URL link) {
+		this.surname = surname;
+		this.name = name;
+		this.patronymic = patronymic;
+		this.link = link;
+		return this;
+	}
+	public SpeakerBuilder job(String job, String place) {
+		this.job = job;
+		this.place = place;
+		return this;
+	}
+	
 }
