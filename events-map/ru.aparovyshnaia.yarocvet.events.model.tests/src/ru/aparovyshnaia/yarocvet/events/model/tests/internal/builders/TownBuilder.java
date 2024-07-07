@@ -15,8 +15,8 @@ public final class TownBuilder {
 	private String description = "You don't fill the gaps. Please try again. It's very instresting to describe blank filed. ~Do you any guilty conscience?~. Please use [infostyle](https://glvrd.ru/). \n You can create new line by combining symbols _n_ and _\\_! Also you can styling text: avalibale hightlighting and italic. Use this opportunity wisly.";
 	private String image = "PLACEHOLDER";
 	private String alt = "PLACEHOLDER";
-	private Date start = new Date(1725170400);
-	private Date end = new Date(0);
+	private Date start = new Date(1725170400000L);
+	private Date end = new Date(1725178500000L);
 	private int minAge = -1;
 	private int maxAge = -1;
 	private int minClass = -1;
@@ -24,7 +24,7 @@ public final class TownBuilder {
 	private List<Participants> participants = List.of(Participants.SCHOOLCHILDREN, Participants.TEACHERS, Participants.PARENTS);
 	private List<Speaker> speaker = List.of();
 	private String ref = "";
-	private TownType type;
+	private TownType type = new TownTypeBuilder().createTownType();
 	
 	public Town createTown() {
 		Town town = EventsFactory.eINSTANCE.createTown();
@@ -70,7 +70,7 @@ public final class TownBuilder {
 		this.maxAge = maxAge;
 		return this;
 	}
-	public TownBuilder withMinAge(int minAge) {
+	public TownBuilder withMinzAge(int minAge) {
 		this.minAge = minAge;
 		return this;
 	}
@@ -91,12 +91,20 @@ public final class TownBuilder {
 		this.maxClass = maxClass;
 		return this;
 	}
-	public TownBuilder withParticipants(List<Participants> participants) {
+	public TownBuilder invinte(List<Participants> participants) {
 		this.participants = participants;
 		return this;
 	}
-	public TownBuilder withSpeakers(List<Speaker> speaker) {
+	public TownBuilder invinte(Participants participant) {
+		this.participants = List.of(participant);
+		return this;
+	}
+	public TownBuilder appoint(List<Speaker> speaker) {
 		this.speaker = speaker;
+		return this;
+	}
+	public TownBuilder appoint(Speaker speaker) {
+		this.speaker = List.of(speaker);
 		return this;
 	}
 	public TownBuilder withType(TownType type) {
