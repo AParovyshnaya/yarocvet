@@ -1,7 +1,0 @@
-[ {
-  "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//TownType",
-  "name" : "Glorious opening"
-}, {
-  "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//TownType",
-  "name" : "Conference"
-} ]

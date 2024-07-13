@@ -2,8 +2,63 @@
 	url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
 	;
 
+:root {
+  --text-color: ;
+  --background-color: ;
+  --invert-text-color: #EEE5E9;
+  --invert-backgound-color: #020122;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+@media (max-width: 700px) {
+	html {
+		font-size: 50%;
+	}
+	.main-description {
+		--greeting: greeting-small;
+	}
+	.gate {
+		--header-height: 33vh;
+	}
+}
+
+@media (min-width: 700px) {
+	.main-description {
+		--greeting: greeting;
+	}
+	.gate {
+		--header-height: 99vh;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.main-descriprion {
+		--greeting: none;
+	}	
+}
+
 body {
 	font-family: 'Montserrat';
+  	font-size: 2rem;
+/* 	-moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto; */
+}
+
+body::-webkit-scrollbar {
+  width: 8px;               /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: #000f08;        /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #8A977D;    /* цвет плашки */
+  border-radius: 5px;       /* закругления плашки */
+  border: 2px solid #2E4057;  /* padding вокруг плашки */
 }
 
 a {
@@ -15,19 +70,88 @@ a:hover {
 }
 
 .main-description {
-	
+	background-color: #000f08;
 }
 
+
 .gate {
-	height: 20vh;
-	margin-top: 1.5rem;
+	height: var(--header-height);
+/*	margin-top: 1.5rem;*/
+	align-items: center;
+	text-align: center
+}
+
+
+@keyframes greeting-small {
+  0% {
+	letter-spacing: normal;
+  }
+
+  5% {
+  	letter-spacing: .3rem;
+  }
+  
+  10% {
+  	letter-spacing: .6rem;
+  }
+  
+  100% {
+  	letter-spacing: 1.75rem;
+  }
 }
 
 .header {
+	background: linear-gradient(
+        to right,
+        #db5461 13%,
+        #8a977d 66%,
+        #dbb077 99%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;	
+	font-size: calc(1.375rem + 9vw);
+	
+	animation-name: var(--greeting), color-burst;
+	animation-duration: 30s, 10s;
+	animation-iteration-count: 1, infinite;
+	animation-direction: normal, alternate;
+	animation-timing-function: linear, ease-in-out;
+	animation-fill-mode: forwards;
 	
 }
 
+@keyframes greeting {
+  0% {
+	letter-spacing: normal;
+  }
+
+  5% {
+  	letter-spacing: .3rem;
+  }
+  
+  10% {
+  	letter-spacing: 1rem;
+  }
+  
+  100% {
+  	letter-spacing: 5rem;
+  }
+}
+
+@keyframes color-burst {
+    from {
+        background-position: 0% 50%;
+    }
+    to {
+        background-position: 200% 50%;
+    }
+}
+
 .cause-to-participate {
+	text-size-adjust: 80%;
 	
 }
 
@@ -40,26 +164,17 @@ a:hover {
 }
 
 .footer {
-	background: #020122;
-	color: #EEE5E9;
+	background: var(--invert-backgound-color);
+	color: var(--invert-text-color);
 }
 
-.big-text {
-	text-align: justify;
-	text-indent: 3rem;
-}
-
-.footer-button {
-	background: #020122;
-	color: #EEE5E9;
-}
-
-a.with-dark-phone {
-	color: #EEE5E9;
-}
-
-a.with-dark-phone:hover {
-	text-decoration-color: #F4442E;
+@scope (.footer) {
+	a {
+		color: var(--invert-text-color);
+	}
+	a:hover {
+		text-decoration-color: #F4442E;
+	}
 }
 
 .copyrights {

@@ -1,88 +1,193 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU">
 
 <head>
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Яроцвет</title>
-<meta name="author"
-	content="Паровышная Анастасия & ГБОУ СОШ №617 Приморского района города Санкт-Петербург">
-<meta name="description"
-	content="Яроцвет — комплекс естественнонаучных событий для школьников с уклоном в практику">
-<meta name="keywords"
-	content="химбио, 617, олимпиада, конференция, квиз, решение кейса, Санкт-Петербург, школьники, школа, естественные науки, биология, химия, физика, астрономия, ОБЖ">
-<link rel="shortcut icon" href="images/icons/favicon32.png"
-	type="image/x-icon">
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-	integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-	crossorigin="anonymous"></script>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-	crossorigin="anonymous">
-<link rel="newer stylesheet" href="css/main.css">
-<link rel="newer stylesheet" href="css/events-map.css">
-<script src="events-map/resources/towns.events"></script>
-<script src="events-map/renderer/fulcrum.js"></script>
-<script lang="js">
- window.onload = function() {
-	 main();
- }	
-</script>
+	<meta charset="utf-8">
+	<meta name="color-scheme" content="light dark">
+	<meta name="viewport"
+		content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+	<title>Яроцвет</title>
+	<meta name="author" content="Паровышная Анастасия & ГБОУ СОШ №617 Приморского района города Санкт-Петербург">
+	<meta name="description"
+		content="Яроцвет — комплекс естественнонаучных событий для школьников с уклоном в практику">
+	<meta name="keywords"
+		content="химбио, 617, олимпиада, конференция, квиз, решение кейса, Санкт-Петербург, школьники, школа, естественные науки, биология, химия, физика, астрономия, ОБЖ">
+	<link rel="shortcut icon" href="images/icons/favicon32.png" type="image/x-icon">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+		crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="newer stylesheet" href="css/main.css">
+	<link rel="newer stylesheet" href="css/events-map.css">
 </head>
 
 <body>
-	<div class="main-description container-fluid text-center">
+	<header class="main-description container-fluid text-center">
 		<div class="row row-cols-1 gate">
-			<h1 class="header">Яроцвет</h1>
+			<h1 class="header col-12">Яроцвет</h1>
 		</div>
-	</div>
-	<div class="cause-to-participate container"></div>
-	<div class="events-map container-fluid" id="canvas"></div>
-	<div class="contacts container text-center">
-		<div
-			class="row justify-content-end align-items-start row-cols-10 gx-1">
-			<div class="col p-3 ms-md-4">
-				<iframe
-					src="https://yandex.ru/map-widget/v1/?um=constructor%3A869b5a8153179dc688568e78df8bc29755238ffd4f80ef285eb11bb9c50f4a36&amp;source=constructor"
-					width="100%" height="600" frameborder="0"></iframe>
+	</header>
+	<main>
+		<section class="cause-to-participate container pt-3 col-12">
+			<span class="placeholder col-10 placeholder-lg"></span>
+			<p class="placeholder-wave">
+				<span class="placeholder col-7"></span>
+				<span class="placeholder col-4"></span>
+				<span class="placeholder col-4"></span>
+				<span class="placeholder col-6"></span>
+				<span class="placeholder col-8"></span>
+			</p>
+			<span class="placeholder col-6 placeholder-lg"></span>
+
+			<p class="placeholder-wave">
+				<span class="placeholder col-2"></span>
+				<span class="placeholder col-8"></span>
+				<span class="placeholder col-3"></span>
+				<span class="placeholder col-3"></span>
+				<span class="placeholder col-4"></span>
+				<span class="placeholder col-6"></span>
+			</p>
+			<span class="placeholder col-9 placeholder-lg"></span>
+			<p class="placeholder-wave">
+				<span class="placeholder col-5"></span>
+				<span class="placeholder col-2"></span>
+				<span class="placeholder col-3"></span>
+				<span class="placeholder col-7"></span>
+				<span class="placeholder col-2"></span>
+				<span class="placeholder col-4"></span>
+			</p>
 			</div>
-		</div>
-	</div>
-	<div class="footer container-fluid text-center">
-		<div
-			class="row justify-content-end align-items-start row-cols-10 gx-2">
-			<div class="col lg-2 p-1">
+		</section>
+		<section class="container-fluid pt-3">
+			<h2 class="text-center">События:</h2>
+			<div class="row justify-content-center align-items-center row-cols-10 gx-1">
+				<div class="col text-center">
+				<p class="">fish-text</p>
+				</div>
+			</div>
+			<div class="row justify-content-center row-cols-8">
+				<div class="events-card card col-8 col-sm-4 me-3" aria-hidden="true">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h3 class="card-title placeholder-glow">
+							<span class="placeholder col-6"></span>
+							</h5>
+							<p class="card-text placeholder-glow">
+								<span class="placeholder col-7"></span>
+								<span class="placeholder col-4"></span>
+								<span class="placeholder col-4"></span>
+								<span class="placeholder col-6"></span>
+								<span class="placeholder col-8"></span>
+							</p>
+							<a class="btn btn-primary disabled placeholder col-6"></a>
+					</div>
+				</div>
+				<div class="events-card card col-8 col-sm-4 me-2" aria-hidden="true">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title placeholder-glow">
+							<span class="placeholder col-6"></span>
+						</h5>
+						<p class="card-text placeholder-glow">
+							<span class="placeholder col-7"></span>
+							<span class="placeholder col-4"></span>
+							<span class="placeholder col-4"></span>
+							<span class="placeholder col-6"></span>
+							<span class="placeholder col-8"></span>
+						</p>
+						<a class="btn btn-primary disabled placeholder col-6"></a>
+					</div>
+				</div>
+				<div class="events-card card col-8 col-sm-4 me-2" aria-hidden="true" hidden>
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title placeholder-glow">
+							<span class="placeholder col-6"></span>
+						</h5>
+						<p class="card-text placeholder-glow">
+							<span class="placeholder col-7"></span>
+							<span class="placeholder col-4"></span>
+							<span class="placeholder col-4"></span>
+							<span class="placeholder col-6"></span>
+							<span class="placeholder col-8"></span>
+						</p>
+						<a class="btn btn-primary disabled placeholder col-6"></a>
+					</div>
+				</div>
+				<div class="events-card card col-8 col-sm-4 me-2" aria-hidden="true" hidden>
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title placeholder-glow">
+							<span class="placeholder col-6"></span>
+						</h5>
+						<p class="card-text placeholder-glow">
+							<span class="placeholder col-7"></span>
+							<span class="placeholder col-4"></span>
+							<span class="placeholder col-4"></span>
+							<span class="placeholder col-6"></span>
+							<span class="placeholder col-8"></span>
+						</p>
+						<a class="btn btn-primary disabled placeholder col-6"></a>
+					</div>
+				</div>
+				<div class="d-grid justify-content-center pt-2 ">
+					<button type="button" class="btn btn-primary btn-lg" id="events-quantity" disabled>Показать больше</button>
+				</div>
+			</div>
+			<!-- <script src="events-map/renderer/plot/d3.min.js"></script>
+			<script src="events-map/renderer/plot/plot.min.js"></script>
+			<script src="events-map/renderer/plot/first.js"></script> -->
+		</section>
+		<section class="contacts container text-center pt-3">
+			<div class="row justify-content-end align-items-start row-cols-10 gx-1">
+				<div class="col ms-md-4">
+					<iframe
+						src="https://yandex.ru/map-widget/v1/?um=constructor%3A869b5a8153179dc688568e78df8bc29755238ffd4f80ef285eb11bb9c50f4a36&amp;source=constructor"
+						width="90%" height="600" frameborder="0"></iframe>
+				</div>
+			</div>
+			<div class="row justify-content-end align-items-start row-cols-10 gx-1">
+				<ol>
+					<li>+7-812-XXX-XX-XX</li>
+				</ol>
+			</div>
+		</section>
+	</main>
+	<footer class="footer container-fluid text-center pt-3">
+		<div class="row justify-content-end align-items-start row-cols-10 gx-2">
+			<div class="col lg-1 p-1">
 				С техническими ошибками и пожеланиями <a class="with-dark-phone"
-					href="https://github.com/AParovyshnaya/yarocvet/issues/new">пишите сюда</a>.
+					href="https://github.com/AParovyshnaya/yarocvet/issues/new">пишите
+					в репозиторий на GitHub.</a>
 			</div>
-			<div class="col lg-2 p-1">
-				[ здесь будут контакты организатора ]
+			<div class="col lg-1 p-1">[ здесь будут контакты организатора ]
 			</div>
-		</div>
-		<div class="container copyrights">
-			<div
-				class="row justify-content-end align-items-start row-cols-10 gx-2">
-				<div class="col p-1 ms-md-4">
-					© 2024 <a class="with-dark-phone"
-						href="https://github.com/aparovyshnaya">AParovyshnaya</a>
-					(Анастасия Паровышная) — сайт (сейчас не работает корректно для
-					мобильных устройств), символика, изображения.
+			<div class="col lg-1 p-1">
+				<a class="with-dark-phone" href="pages/resources.html">Ресурсы</a>
+			</div>
+			</hr>
+			<div class="container copyrights">
+				<div class="row justify-content-end align-items-start row-cols-10 gx-2">
+					<div class="col p-1 ms-md-4">
+						© 2024 <a class="with-dark-phone" href="https://github.com/aparovyshnaya">AParovyshnaya</a>
+						(Анастасия Паровышная) — сайт, символика, изображения.
+					</div>
+				</div>
+				<div class="row justify-content-end align-items-start row-cols-10 gx-2">
+					<div class="col p-1 ms-md-4">
+						© 2024 <a class="with-dark-phone" href="http://www.school617.spb.ru/">ГБОУ СОШ №617 Приморского
+							района Санкт-Петербурга</a> — организатор и координатор мероприятия.
+					</div>
 				</div>
 			</div>
-			<div
-				class="row justify-content-end align-items-start row-cols-10 gx-2">
-				<div class="col p-1 ms-md-4">
-					© 2024 <a class="with-dark-phone"
-						href="http://www.school617.spb.ru/">ГБОУ СОШ №617 Приморского
-						района Санкт-Петербурга</a> — организатор и координатор мероприятия.
+			<div class="container version">
+				<div class="row justify-content-end align-items-start row-cols-10 gx-2">
+					<div class="col p-1 ms-md-4">Сайт ещё не доделан. v0.0.2.</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</footer>
 </body>
 
 </html>
