@@ -20,12 +20,6 @@
 		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link rel="newer stylesheet" href="css/main.css">
 	<link rel="newer stylesheet" href="css/events-map.css">
-	<script src="events-map/resources/towns.events"></script>
-	<!-- <script lang="js">
-	window.onload = function() {
-		main();
-	}
-</script> -->
 </head>
 
 <body>
@@ -65,12 +59,14 @@
 			</p>
 			</div>
 		</section>
-		<section class="events-map container-fluid pt-3" id="canvas">
-			<h2>События:</h2>
-			<div class="row justify-content-end align-items-start row-cols-10 gx-1">
-				<p>fish-text</p>
+		<section class="container-fluid pt-3">
+			<h2 class="text-center">События:</h2>
+			<div class="row justify-content-center align-items-center row-cols-10 gx-1">
+				<div class="col text-center">
+				<p class="">fish-text</p>
+				</div>
 			</div>
-			<div id="alternative-events-map" class="row justify-content-center row-cols-8">
+			<div class="row justify-content-center row-cols-8">
 				<div class="events-card card col-8 col-sm-4 me-3" aria-hidden="true">
 					<img src="..." class="card-img-top" alt="...">
 					<div class="card-body">
@@ -103,10 +99,7 @@
 						<a class="btn btn-primary disabled placeholder col-6"></a>
 					</div>
 				</div>
-				<div class="d-grid justify-content-center pt-2 ">
-					<button type="button" class="btn btn-primary btn-lg" id="events-quantity" disabled>Показать больше</button>
-				</div>
-				<div class="events-card card col-8 col-sm-4 me-2" aria-hidden="true">
+				<div class="events-card card col-8 col-sm-4 me-2" aria-hidden="true" hidden>
 					<img src="..." class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title placeholder-glow">
@@ -122,10 +115,7 @@
 						<a class="btn btn-primary disabled placeholder col-6"></a>
 					</div>
 				</div>
-				<div class="d-grid justify-content-center pt-2 ">
-					<button type="button" class="btn btn-primary btn-lg" id="events-quantity" disabled>Показать больше</button>
-				</div>
-				<div class="events-card card col-8 col-sm-4 me-2" aria-hidden="true">
+				<div class="events-card card col-8 col-sm-4 me-2" aria-hidden="true" hidden>
 					<img src="..." class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title placeholder-glow">
@@ -198,10 +188,6 @@
 			</div>
 		</div>
 	</footer>
-	<script src="events-map/renderer/alt/underscore.min.js"></script>
-	<script src="events-map/renderer/alt/ecore.min.js"></script>
-	<script  src="events-map/resources/towns.events"></script>
-	<script src="events-map/renderer/alt/alt-events-map.js"></script>
 </body>
 
 </html>
