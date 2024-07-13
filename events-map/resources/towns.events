@@ -1,25 +1,23 @@
-[ {
+{
   "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
-  "name" : "Glorious opening of First Yarocvet session",
-  "start" : "1970-01-21T03:07:51",
+  "name" : "On the Origin of Species Publication",
+  "description" : "How mitigate the Church confusion, when you talk about Natural Selection? My contribution to modern Natural Selection Theory ",
+  "image" : "PLACEHOLDER",
+  "alt" : "PLACEHOLDER",
+  "start" : "2024-10-08T11:45:00",
+  "end" : "2024-09-01T11:15:00",
+  "minAge" : -1,
+  "maxAge" : -1,
+  "minClass" : -1,
+  "maxClass" : -1,
+  "participants" : [ "Schoolchildren", "Teachers", "Parents" ],
+  "speakers" : [ {
+    "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Speaker",
+    "$ref" : "speakers.events#/"
+  } ],
+  "ref" : "/natural-selection/origin-of-the-species",
   "type" : {
     "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//TownType",
-    "$ref" : "types.events#/0"
+    "$ref" : "#//"
   }
-}, {
-  "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
-  "name" : "Microplastic disaster at Finskiy Bay and Kotlin",
-  "start" : "1970-01-21T06:08:13",
-  "type" : {
-    "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//TownType",
-    "$ref" : "types.events#/1"
-  }
-}, {
-  "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//Town",
-  "name" : "Agronomical companies in Gatchinskiy Region",
-  "start" : "1970-01-21T06:42:46",
-  "type" : {
-    "eClass" : "http://ru.aparovyshnaia/events/0.1.0#//TownType",
-    "$ref" : "types.events#/1"
-  }
-} ]
+}

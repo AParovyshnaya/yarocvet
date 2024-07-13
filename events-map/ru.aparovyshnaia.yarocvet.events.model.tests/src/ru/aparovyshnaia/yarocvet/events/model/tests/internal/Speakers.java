@@ -17,7 +17,7 @@ public final class Speakers {
 	
 	private List<Speaker> createSpeakers() {
 		return List.of(//
-				new SpeakerBuilder().present("Darwin", "Charles",  link("https://en.wikipedia.org/wiki/Charles_Darwin)")).createSpeaker()//
+				new SpeakerBuilder().present("Darwin", "Charles",  link("https://en.wikipedia.org/wiki/Charles_Darwin")).createSpeaker()//
 				);
 	}
 	

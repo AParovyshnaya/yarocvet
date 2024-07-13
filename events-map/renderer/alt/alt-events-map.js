@@ -1,6 +1,10 @@
+import towns from '/events-map/resources/towns.events' assert {type: 'json'}; // имя при импорте может не совпадать с именем файла
+
+
+
 const container = document.getElementById("alternative-events-map");
 //container.replaceChildren(generateAltEventsMap());
-const towns = require("events-map/resources/towns.events");
+// // const towns = require("events-map/resources/towns.events");
 console.log(towns);
 
 function createElementAndSetClasses(name, classes) {
@@ -23,6 +27,7 @@ function describe(event) {
 
 
 function getData(path) {
+
 }
 
 // function getData(path) {

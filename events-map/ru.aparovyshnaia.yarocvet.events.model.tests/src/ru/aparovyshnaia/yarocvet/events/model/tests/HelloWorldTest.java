@@ -23,8 +23,9 @@ public final class HelloWorldTest {
 
 	@Test
 	void hello() throws IOException {
+		new YarocvetRegistration().ensure();
+		
 		save();
-
 		// load
 		Resource resource = new ResourceSetImpl().getResource(uri("towns.events"), true);
 		assertNotNull(resource);
