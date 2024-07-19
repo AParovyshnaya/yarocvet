@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="id1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st3{clip-path:url(#SVGID_2_);fill:#DBB077;}
+	.st4{clip-path:url(#SVGID_4_);fill:#DBB077;}
+	.st5{fill:none;stroke:#000F08;stroke-miterlimit:10;}
+	.st6{clip-path:url(#SVGID_6_);fill:none;stroke:#3D5467;stroke-miterlimit:10;}
+</style>
+<g class="st0">
+	<polygon class="st1" points="4.5,9.5 4.5,13.5 9.5,13.5 9.5,9.5 7,9.5 	"/>
+	<circle class="st1" cx="7" cy="7" r="2.5"/>
+</g>
+<path class="st2" d="M4.7,10.5"/>
+<g>
+	<defs>
+		<path id="SVGID_1_" d="M9.8,9.8l-0.9-1V6.9l1.4-1.5c1-0.6,1.7-1.5,1.7-2.5c0-0.9-0.5-1.8-1.4-2.3H5.4C4.5,1.1,4,1.9,4,2.8
+			c0,1,0.7,2,1.7,2.5l1.4,1.5v1.9l-0.9,1C4.9,10.3,4,11.5,4,12.9c0,1.1,0.5,2,1.4,2.6h5.2c0.8-0.6,1.4-1.6,1.4-2.6
+			C12,11.5,11.1,10.3,9.8,9.8z"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<polygon class="st3" points="17.5,6.9 11.4,0 4.5,2.5 10.6,9.4 	"/>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_3_" d="M6.2,6.2l0.9,1v1.9l-1.4,1.5c-1,0.6-1.7,1.5-1.7,2.5c0,0.9,0.5,1.8,1.4,2.3h5.2c0.8-0.6,1.4-1.4,1.4-2.3
+			c0-1-0.7-2-1.7-2.5L8.9,9.1V7.2l0.9-1C11.1,5.7,12,4.5,12,3.1c0-1.1-0.5-2-1.4-2.6H5.4C4.5,1.1,4,2.1,4,3.1C4,4.5,4.9,5.7,6.2,6.2
+			z"/>
+	</defs>
+	<clipPath id="SVGID_4_">
+		<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+	</clipPath>
+	<polygon class="st4" points="-4.5,7.2 1.6,14.1 8.5,11.6 2.4,4.7 	"/>
+</g>
+<path class="st5" d="M9.8,9.8l-0.9-1V6.9l1.4-1.5c1-0.6,1.7-1.5,1.7-2.5c0-0.9-0.5-1.8-1.4-2.3H5.4C4.5,1.1,4,1.9,4,2.8
+	c0,1,0.7,2,1.7,2.5l1.4,1.5v1.9l-0.9,1C4.9,10.3,4,11.5,4,12.9c0,1.1,0.5,2,1.4,2.6h5.2c0.8-0.6,1.4-1.6,1.4-2.6
+	C12,11.5,11.1,10.3,9.8,9.8z"/>
+<g>
+	<defs>
+		<polygon id="SVGID_5_" points="0,0.8 12.4,14.9 23.7,12 11.4,-2 		"/>
+	</defs>
+	<clipPath id="SVGID_6_">
+		<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+	</clipPath>
+	<path class="st6" d="M9.8,9.8l-0.9-1V6.9l1.4-1.5c1-0.6,1.7-1.5,1.7-2.5c0-0.9-0.5-1.8-1.4-2.3H5.4C4.5,1.1,4,1.9,4,2.8
+		c0,1,0.7,2,1.7,2.5l1.4,1.5v1.9l-0.9,1C4.9,10.3,4,11.5,4,12.9c0,1.1,0.5,2,1.4,2.6h5.2c0.8-0.6,1.4-1.6,1.4-2.6
+		C12,11.5,11.1,10.3,9.8,9.8z"/>
+</g>
+</svg>

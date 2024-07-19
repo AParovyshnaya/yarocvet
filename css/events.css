@@ -1,0 +1,19 @@
+.start::before {
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background-size: 16px 16px;
+    content: url("../images/icons/events/start.svg");
+    background-repeat: no-repeat;
+}
+
+.duration::before {
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background-size: 16px 16px;
+    background-image: url("../images/icons/events/duration.svg");
+    background-repeat: no-repeat;
+}
