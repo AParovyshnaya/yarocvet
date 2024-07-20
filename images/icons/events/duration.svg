@@ -5,8 +5,8 @@
 	.st0{display:none;}
 	.st3{clip-path:url(#SVGID_2_);fill:#DBB077;}
 	.st4{clip-path:url(#SVGID_4_);fill:#DBB077;}
-	.st5{fill:none;stroke:#000F08;stroke-miterlimit:10;}
-	.st6{clip-path:url(#SVGID_6_);fill:none;stroke:#3D5467;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#3D5467;stroke-miterlimit:10;}
+	.st6{clip-path:url(#SVGID_6_);fill:none;stroke:#8A977D;stroke-miterlimit:10;}
 </style>
 <g class="st0">
 	<polygon class="st1" points="4.5,9.5 4.5,13.5 9.5,13.5 9.5,9.5 7,9.5 	"/>

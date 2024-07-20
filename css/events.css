@@ -1,19 +1,24 @@
+.abstract-item {}
+
+@scope (.card-body) {
+    ::before {
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+        
+    }
+}
+
 .start::before {
-    content: "";
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    background-size: 16px 16px;
     content: url("../images/icons/events/start.svg");
-    background-repeat: no-repeat;
 }
 
 .duration::before {
-    content: "";
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    background-size: 16px 16px;
-    background-image: url("../images/icons/events/duration.svg");
-    background-repeat: no-repeat;
+    content: url("../images/icons/events/duration.svg");
+}
+
+.age::before {
+    content: url("../images/icons/events/age.svg");
 }
