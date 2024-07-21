@@ -3,7 +3,6 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="color-scheme" content="light dark">
 	<meta name="viewport"
 		content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
 	<title>Яроцвет</title>
@@ -59,15 +58,13 @@
 			</p>
 			</div>
 		</section>
-		<section class="container-fluid pt-3">
+		<section class="events container-fluid pt-3">
 			<h2 class="text-center">События:</h2>
 			<div class="row justify-content-center align-items-center row-cols-10 gx-1">
-				<div class="col text-center">
-					<p class="">fish-text</p>
-				</div>
+				<p class="col text-center">fish-text</p>
 			</div>
-			<div class="row justify-content-center row-cols-12 g-3">
-				<article class="events-card card col-12 col-sm-4 biology">
+			<div class="row justify-content-center g-3">
+				<article class="events card col-8 col-sm-4 mx-3 biology">
 					<div class="card-body">
 						<h3 class="card-title">
 							Как появилась современная теория эволюции
@@ -87,12 +84,14 @@
 							8-11 классы
 						</p>
 						<p class="speaker card-text">
-							<a href="https://en.wikipedia.org/wiki/CR_Darwin">Чарльз Дарвин</a>, <a href="http://school617.spb.ru/kollektiv/pedagogi/uchitelja-biologii/">учителя биологии</a>
+							<a href="https://en.wikipedia.org/wiki/CR_Darwin">Чарльз Дарвин</a>, <a
+								href="http://school617.spb.ru/kollektiv/pedagogi/uchitelja-biologii/">учителя
+								биологии</a>
 						</p>
-						<a class="btn btn-primary disabled">Подробнее</a>
+						<a class="btn btn-primary" href="pages/biology/evolution.html">Подробнее</a>
 					</div>
 				</article>
-				<article class="events-card card col-5 col-sm-4" aria-hidden="true">
+				<article class="events card col-sm-4 me-3" aria-hidden="true">
 					<img src="..." class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title placeholder-glow">
@@ -108,7 +107,7 @@
 						<a class="btn btn-primary disabled placeholder col-6"></a>
 					</div>
 				</article>
-				<article class="events-card card col-10 col-sm-4 me-2 hesitant" aria-hidden="true" hidden>
+				<article class="events card col-sm-4 mx-3 hesitant" aria-hidden="true" hidden>
 					<img src="..." class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title placeholder-glow">
@@ -124,7 +123,7 @@
 						<a class="btn btn-primary disabled placeholder col-6"></a>
 					</div>
 				</article>
-				<article class="events-card card col-10 col-sm-4 me-2 hesitant" aria-hidden="true" hidden>
+				<article class="events card col-sm-4 me-3 hesitant" aria-hidden="true" hidden>
 					<img src="..." class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title placeholder-glow">
@@ -141,13 +140,14 @@
 					</div>
 				</article>
 				<div class="d-grid justify-content-center pt-2 ">
-					<button type="button" class="btn btn-primary btn-lg" id="events-quantity" type="button">Показать
-						больше</button>
+					<button type="button" class="btn btn-primary btn-lg" id="events-quantity" value="show"
+						type="button">Показать больше</button>
 					<script>
 						const button = document.getElementById("events-quantity");
 						const articles = document.getElementsByClassName("hesitant");
 						button.onclick = () => {
-							button.textContent === "Показать больше" ? change("Показать меньше", true) : change("Показать больше", false);
+							console.log(button.textContent === "Показать больше");
+							button.textContent === "Показать больше" ? change("Показать меньше", false) : change("Показать больше", true);
 							function change(text, status) {
 								button.textContent = text;
 								for (article of articles) {

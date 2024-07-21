@@ -1,39 +1,46 @@
-@scope (.biology) {
-    @scope (.card-body::hover) {
+ @media (min-width: 768px) {
+     .small-event::after {
+         content: "→";
+         font-size: large;
+         z-index: 100;
+         transform: translate(20cqw, -50cqh);
+     }
+ }
 
-    }
-} 
-
-@keyframe knowledge-wave {
-    from {
-        background-image: ;
-    }
-    to {}
-}
-
-@scope (.card-body) {
-    ::before {
-        display: inline-block;
-        height: 16px;
-        width: 16px;
-        background-size: 16px 16px;
-        background-repeat: no-repeat;
-        
+ @media (max-width: 768px) {
+    .small-event::after {
     }
 }
 
-.start::before {
-    content: url("../images/icons/events/start.svg");
-}
+ @scope (.card-body) {
+     ::before {
+         display: inline-block;
+         height: 16px;
+         width: 16px;
+         background-size: 16px 16px;
+         background-repeat: no-repeat;
 
-.duration::before {
-    content: url("../images/icons/events/duration.svg");
-}
+     }
+ }
 
-.age::before {
-    content: url("../images/icons/events/age.svg");
-}
+ @scope (.speaker) {
+     a {
+         color: var(--speaker-color);
+     }
+ }
 
-.speaker::before {
-    content: url("../images/icons/events/speaker.svg");
-}
+ .start::before {
+     content: url("../images/icons/events/start.svg");
+ }
+
+ .duration::before {
+     content: url("../images/icons/events/duration.svg");
+ }
+
+ .age::before {
+     content: url("../images/icons/events/age.svg");
+ }
+
+ .speaker::before {
+     content: url("../images/icons/events/speaker.svg");
+ }

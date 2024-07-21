@@ -81,14 +81,12 @@ h3 {
 	background-color: #000f08;
 }
 
-
 .gate {
 	height: var(--header-height);
 /*	margin-top: 1.5rem;*/
 	align-items: center;
 	text-align: center
 }
-
 
 @keyframes greeting-small {
   0% {
