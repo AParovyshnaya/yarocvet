@@ -1,4 +1,15 @@
-.abstract-item {}
+@scope (.biology) {
+    @scope (.card-body::hover) {
+
+    }
+} 
+
+@keyframe knowledge-wave {
+    from {
+        background-image: ;
+    }
+    to {}
+}
 
 @scope (.card-body) {
     ::before {
@@ -21,4 +32,8 @@
 
 .age::before {
     content: url("../images/icons/events/age.svg");
+}
+
+.speaker::before {
+    content: url("../images/icons/events/speaker.svg");
 }

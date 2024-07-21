@@ -69,6 +69,14 @@ a:hover {
 	text-decoration: underline;
 }
 
+h2 {
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 1.17em;
+}
+
 .main-description {
 	background-color: #000f08;
 }
@@ -152,10 +160,6 @@ a:hover {
 
 .cause-to-participate {
 	text-size-adjust: 80%;
-	
-}
-
-.events-map {
 	
 }
 

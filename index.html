@@ -66,8 +66,8 @@
 					<p class="">fish-text</p>
 				</div>
 			</div>
-			<div class="row justify-content-center row-cols-10">
-				<div class="events-card card col-10 col-sm-4 me-3" aria-hidden="true">
+			<div class="row justify-content-center row-cols-12 g-3">
+				<article class="events-card card col-12 col-sm-4 biology">
 					<div class="card-body">
 						<h3 class="card-title">
 							Как появилась современная теория эволюции
@@ -77,19 +77,22 @@
 							Найдём лучевую кость у всех отрядов млекопитающих и составим карту кругосветного путешествия
 							Чарльза Дарвина!
 						</p>
-						<p  class="start card-text">
+						<p class="start card-text">
 							<time datetime="2024-10-17T17:00-03:00">17 октября, 17:00</time>
 						</p>
-						<p  class="duration card-text">
+						<p class="duration card-text">
 							<time datetime="3 h">3 часа + ответы на вопросы</time>
 						</p>
-						<p  class="age card-text">
+						<p class="age card-text">
 							8-11 классы
+						</p>
+						<p class="speaker card-text">
+							<a href="https://en.wikipedia.org/wiki/CR_Darwin">Чарльз Дарвин</a>, <a href="http://school617.spb.ru/kollektiv/pedagogi/uchitelja-biologii/">учителя биологии</a>
 						</p>
 						<a class="btn btn-primary disabled">Подробнее</a>
 					</div>
-				</div>
-				<div class="events-card card col-10 col-sm-4 me-2" aria-hidden="true">
+				</article>
+				<article class="events-card card col-5 col-sm-4" aria-hidden="true">
 					<img src="..." class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title placeholder-glow">
@@ -104,8 +107,8 @@
 						</p>
 						<a class="btn btn-primary disabled placeholder col-6"></a>
 					</div>
-				</div>
-				<div class="events-card card col-10 col-sm-4 me-2" aria-hidden="true" hidden>
+				</article>
+				<article class="events-card card col-10 col-sm-4 me-2 hesitant" aria-hidden="true" hidden>
 					<img src="..." class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title placeholder-glow">
@@ -120,8 +123,8 @@
 						</p>
 						<a class="btn btn-primary disabled placeholder col-6"></a>
 					</div>
-				</div>
-				<div class="events-card card col-10 col-sm-4 me-2" aria-hidden="true" hidden>
+				</article>
+				<article class="events-card card col-10 col-sm-4 me-2 hesitant" aria-hidden="true" hidden>
 					<img src="..." class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title placeholder-glow">
@@ -136,10 +139,23 @@
 						</p>
 						<a class="btn btn-primary disabled placeholder col-6"></a>
 					</div>
-				</div>
+				</article>
 				<div class="d-grid justify-content-center pt-2 ">
-					<button type="button" class="btn btn-primary btn-lg" id="events-quantity" disabled>Показать
+					<button type="button" class="btn btn-primary btn-lg" id="events-quantity" type="button">Показать
 						больше</button>
+					<script>
+						const button = document.getElementById("events-quantity");
+						const articles = document.getElementsByClassName("hesitant");
+						button.onclick = () => {
+							button.textContent === "Показать больше" ? change("Показать меньше", true) : change("Показать больше", false);
+							function change(text, status) {
+								button.textContent = text;
+								for (article of articles) {
+									article.hidden = status;
+								}
+							}
+						}
+					</script>
 				</div>
 			</div>
 		</section>
@@ -150,11 +166,6 @@
 						src="https://yandex.ru/map-widget/v1/?um=constructor%3A869b5a8153179dc688568e78df8bc29755238ffd4f80ef285eb11bb9c50f4a36&amp;source=constructor"
 						width="90%" height="600" frameborder="0"></iframe>
 				</div>
-			</div>
-			<div class="row justify-content-end align-items-start row-cols-10 gx-1">
-				<ol>
-					<li>+7-812-XXX-XX-XX</li>
-				</ol>
 			</div>
 		</section>
 	</main>
