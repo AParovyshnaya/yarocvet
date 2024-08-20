@@ -1,0 +1,25 @@
+footer {
+	background: var(--invert-backgound-color);
+	color: var(--invert-text-color);
+
+	display: flex;
+	flex-direction: column;
+	
+	padding-left: 2vw;
+}
+
+@scope (footer) {
+	a {
+		color: var(--invert-text-color);
+	}
+
+	a:hover {
+		text-decoration-color: #F4442E;
+	}
+}
+
+.copyrights {
+	border-color: #F7F3F5;
+	border-top-width: 1px;
+	border-style: solid none none none;
+}

@@ -19,7 +19,7 @@
     content: "";
 }
 
- @scope (.card) {
+ @scope (.event) {
      ::before {
          display: inline-block;
          height: 16px;
