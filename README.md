@@ -1,3 +1,7 @@
+> [!CAUTION]
+> Is not actually. For some time, new content wil be added.
+
+
 You can read Russian version [at this page](RUREADME.md).
 
 # Yarocvet

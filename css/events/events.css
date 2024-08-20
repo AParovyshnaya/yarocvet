@@ -1,9 +1,9 @@
 div.events {
 	display: flex;
-	
+
 	flex-direction: row;
 	flex-wrap: wrap;
-	
+
 	gap: 30px 30px;
 
 }

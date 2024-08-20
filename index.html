@@ -11,7 +11,7 @@
 		content="Яроцвет — комплекс естественнонаучных событий для школьников с уклоном в практику">
 	<meta name="keywords"
 		content="химбио, 617, олимпиада, конференция, квиз, решение кейса, Санкт-Петербург, школьники, школа, естественные науки, биология, химия, физика, астрономия, ОБЖ">
-		
+
 	<link rel="shortcut icon" href="images/icons/favicon32.png" type="image/x-icon">
 	<link rel="stylesheet" href="css/fonts/Montesrrat.css">
 	<link rel="stylesheet" href="css/common/main.css">
@@ -25,12 +25,12 @@
 </head>
 
 <body>
-<!--	it's for time!-->
-<!--	<header class="main-description">-->
-<!--		<div class="gate">-->
-<!--			<h1 class="header">Яроцвет</h1>-->
-<!--		</div>-->
-<!--	</header>-->
+	<!--	it's for time!-->
+	<!--	<header class="main-description">-->
+	<!--		<div class="gate">-->
+	<!--			<h1 class="header">Яроцвет</h1>-->
+	<!--		</div>-->
+	<!--	</header>-->
 	<main>
 		<section class="cause-to-participate">
 			<span class="placeholder"></span>
@@ -103,59 +103,59 @@
 						<a></a>
 					</div>
 				</article>
-					<button type="button" class="btn btn-primary btn-lg" id="events-quantity" value="show"
-						type="button">Показать больше</button>
-					<script>
-						const button = document.getElementById("events-quantity");
-						const articles = document.getElementsByClassName("hesitant");
-						button.onclick = () => {
-							console.log(button.textContent === "Показать больше");
-							button.textContent === "Показать больше" ? change("Показать меньше", false) : change("Показать больше", true);
-							function change(text, status) {
-								button.textContent = text;
-								for (article of articles) {
-									article.hidden = status;
-								}
+				<button type="button" class="btn btn-primary btn-lg" id="events-quantity" value="show"
+					type="button">Показать больше</button>
+				<script>
+					const button = document.getElementById("events-quantity");
+					const articles = document.getElementsByClassName("hesitant");
+					button.onclick = () => {
+						console.log(button.textContent === "Показать больше");
+						button.textContent === "Показать больше" ? change("Показать меньше", false) : change("Показать больше", true);
+						function change(text, status) {
+							button.textContent = text;
+							for (article of articles) {
+								article.hidden = status;
 							}
 						}
-					</script>
+					}
+				</script>
 			</div>
 		</section>
 		<section class="contacts">
-					<iframe
-						src="https://yandex.ru/map-widget/v1/?um=constructor%3A869b5a8153179dc688568e78df8bc29755238ffd4f80ef285eb11bb9c50f4a36&amp;source=constructor"
-						width="90%" height="600" frameborder="0"></iframe>
-		<div hidden>Здесь будут контакты</div>
-					</section>
+			<iframe
+				src="https://yandex.ru/map-widget/v1/?um=constructor%3A869b5a8153179dc688568e78df8bc29755238ffd4f80ef285eb11bb9c50f4a36&amp;source=constructor"
+				width="90%" height="600" frameborder="0"></iframe>
+			<div hidden>Здесь будут контакты</div>
+		</section>
 
 	</main>
 	<footer>
 
-			<div class="shortcut-contacts">[ здесь будут контакты организатора ]
+		<div class="shortcut-contacts">[ здесь будут контакты организатора ]
+		</div>
+		</hr>
+		<div class="copyrights">
+			<div class="">
+				© 2024 <a href="http://www.school617.spb.ru/">ГБОУ СОШ №617 Приморского
+					района Санкт-Петербурга</a> — организатор и координатор мероприятия, поддержка сайта.
 			</div>
-			</hr>
-			<div class="copyrights">
-				<div class="">
-						© 2024 <a href="http://www.school617.spb.ru/">ГБОУ СОШ №617 Приморского
-							района Санкт-Петербурга</a> — организатор и координатор мероприятия, поддержка сайта.
-				</div>
-				<div class="">
-						© 2024 <a href="https://github.com/aparovyshnaya">AParovyshnaya</a>
-						(Анастасия Паровышная) — сайт, изображения.
-				</div>
+			<div class="">
+				© 2024 <a href="https://github.com/aparovyshnaya">AParovyshnaya</a>
+				(Анастасия Паровышная) — сайт, изображения.
+			</div>
 			<div class="resources">
 				<a href="pages/resources.html">Ресурсы</a>
 			</div>
+		</div>
+		<div class="about-product">
+			<div>
+				С техническими ошибками и пожеланиями <a
+					href="https://github.com/AParovyshnaya/yarocvet/issues/new">пишите
+					в репозиторий на GitHub.</a>
 			</div>
-			<div class="about-product">
-				<div>
-					С техническими ошибками и пожеланиями <a
-						href="https://github.com/AParovyshnaya/yarocvet/issues/new">пишите
-						в репозиторий на GitHub.</a>
-				</div>
-					<div>Сайт ещё не доделан. v0.5.</div>
-					
-			</div>
+			<div>Сайт ещё не доделан. v0.5.</div>
+
+		</div>
 	</footer>
 </body>
 
