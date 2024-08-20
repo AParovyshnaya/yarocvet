@@ -6,56 +6,6 @@
   --invert-backgound-color: #020122;
 }
 
-
-@media (max-width: 700px) {
-	html {
-		font-size: 50%;
-	}
-	.main-description {
-		--greeting: greeting-small;
-	}
-	.gate {
-		--header-height: 33vh;
-	}
-}
-
-@media (min-width: 700px) {
-	.main-description {
-		--greeting: greeting;
-	}
-	.gate {
-		--header-height: 99vh;
-	}
-}
-
-@media (prefers-reduced-motion: reduce) {
-	.main-descriprion {
-		--greeting: none;
-	}	
-}
-
-body {
-	font-family: 'Montserrat';
-	font-weight: 400;
-
-  	font-size: 2rem;
-/* 	-moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto; */
-}
-
-
-
 .main-description {
 	background-color: #000f08;
-}
-
-.cause-to-participate {
-	text-size-adjust: 80%;
-	
-}
-
-.contacts {
-	
 }

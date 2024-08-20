@@ -1,3 +1,29 @@
+
+@media (max-width: 700px) {
+	.main-description {
+		--greeting: greeting-small;
+	}
+	.gate {
+		--header-height: 33vh;
+	}
+}
+
+
+@media (min-width: 700px) {
+	.main-description {
+		--greeting: greeting;
+	}
+	.gate {
+		--header-height: 99vh;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.main-descriprion {
+		--greeting: none;
+	}	
+}
+
 .gate {
 	height: var(--header-height);
 /*	margin-top: 1.5rem;*/
