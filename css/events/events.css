@@ -5,6 +5,9 @@ div.events {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: left;
-	gap: 15px 15px;
+	gap: var(--small-margin) var(--small-margin);
+}
 
+button#events-quantity {
+	margin-top: var(--small-margin);
 }

@@ -1,3 +1,8 @@
+:root {
+	--margin: 2rem;
+	--small-margin: 1rem;
+}
+
 html {
 	font-size: 62.5%;
 }
@@ -25,4 +30,21 @@ main {
 	padding-left: 2vw;
 	padding-right: 2vw;
 
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	align-items: center;
+}
+
+section {
+	margin-bottom: var(--margin);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h1, h2, h3, h4, h5 {
+	align-self: start;
 }
