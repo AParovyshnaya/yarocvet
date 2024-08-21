@@ -73,7 +73,7 @@
 						<a href="pages/biology/evolution.html">Подробнее</a>
 					</div>
 				</article>
-				<article class="event" aria-hidden="true">
+				<article class="event">
 					<img src="..." alt="...">
 					<div class="event-content">
 						<h5 class="placeholder">
@@ -83,7 +83,7 @@
 						<a></a>
 					</div>
 				</article>
-				<article class="event" aria-hidden="true" hidden>
+				<article class="event" hidden>
 					<img src="..." alt="...">
 					<div class="event-content">
 						<h5 class="placeholder">
@@ -93,7 +93,7 @@
 						<a></a>
 					</div>
 				</article>
-				<article class="event" aria-hidden="true" hidden>
+				<article class="event" hidden>
 					<img src="..." alt="...">
 					<div class="event-content">
 						<h5 class="placeholder">
@@ -103,23 +103,23 @@
 						<a></a>
 					</div>
 				</article>
-				<button type="button" class="btn btn-primary btn-lg" id="events-quantity" value="show"
-					type="button">Показать больше</button>
-				<script>
-					const button = document.getElementById("events-quantity");
-					const articles = document.getElementsByClassName("hesitant");
-					button.onclick = () => {
-						console.log(button.textContent === "Показать больше");
-						button.textContent === "Показать больше" ? change("Показать меньше", false) : change("Показать больше", true);
-						function change(text, status) {
-							button.textContent = text;
-							for (article of articles) {
-								article.hidden = status;
-							}
+			</div>
+			<button type="button" class="btn btn-primary btn-lg" id="events-quantity" type="button">Показать
+				больше</button>
+			<script>
+				const button = document.getElementById("events-quantity");
+				const min = 2;
+				const articles = Array.from(document.querySelectorAll("article.event")).slice(min);
+				button.onclick = () => {
+					button.textContent === "Показать больше" ? change("Показать меньше", false) : change("Показать больше", true);
+					function change(text, status) {
+						button.textContent = text;
+						for (article of articles) {
+							article.hidden = status;
 						}
 					}
-				</script>
-			</div>
+				}
+			</script>
 		</section>
 		<section class="contacts">
 			<iframe
@@ -147,15 +147,7 @@
 				<a href="pages/resources.html">Ресурсы</a>
 			</div>
 		</div>
-		<div class="about-product">
-			<div>
-				С техническими ошибками и пожеланиями <a
-					href="https://github.com/AParovyshnaya/yarocvet/issues/new">пишите
-					в репозиторий на GitHub.</a>
-			</div>
-			<div>Сайт ещё не доделан. v0.5.</div>
-
-		</div>
+		<div class="version">Сайт ещё не доделан. v0.5.</div>
 	</footer>
 </body>
 
