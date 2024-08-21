@@ -1,0 +1,11 @@
+
+:root {
+	--text-color: ;
+	--background-color: ;
+	--invert-text-color: #EEE5E9;
+	--invert-backgound-color: #020122;
+}
+
+.main-description {
+	background-color: #000f08;
+}

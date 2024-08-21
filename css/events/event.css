@@ -1,0 +1,69 @@
+.event {
+	/*	for highlighting*/
+	background-color: #FFFAFB;
+
+	padding-left: 5rem;
+	padding-right: 5rem;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	flex-grow: 1;
+
+}
+
+@media (min-width: 768px) {
+	.small-event::after {
+		content: "→";
+		font-size: 2cqw;
+		z-index: 100;
+		transform: translate(20cqw, -50cqh);
+		color: #FFFAFB;
+		font-weight: 100;
+		-webkit-text-stroke: 0.5px black;
+	}
+}
+
+@media (max-width: 768px) {
+	.small-event::after {}
+}
+
+.small-event:last-of-type::after {
+	content: "";
+}
+
+@scope (.event) {
+	::before {
+		display: inline-block;
+		height: 16px;
+		width: 16px;
+		background-size: 16px 16px;
+		background-repeat: no-repeat;
+
+	}
+}
+
+@scope (.speaker) {
+	a {
+		color: var(--speaker-color);
+	}
+}
+
+.start::before {
+	content: url("../../images/icons/events/start.svg");
+}
+
+.duration::before {
+	content: url("../../images/icons/events/duration.svg");
+}
+
+.age::before {
+	content: url("../../images/icons/events/age.svg");
+}
+
+.speaker::before {
+	content: url("../../images/icons/events/speaker.svg");
+}
+
+.invite:before {
+	content: url("../../images/icons/events/invite.svg");
+	margin-right: .5rem;
+}
