@@ -1,0 +1,30 @@
+.social {
+	display: flex;
+	flex-direction: row;
+	gap: var(--small-margin) var(--small-margin);
+
+}
+
+@scope (.social) {
+	a::before {
+		display: inline-block;
+		aspect-ratio: 1 / 1;
+		height: 4rem;
+		background-size: contain;
+	}
+
+	a[href*="https://github.com"]::before {
+		content: "";
+		background-image: url("../../images/icons/social/github.svg");
+	}
+
+	a:hover::after {
+		content: attr(title);
+		margin: 0 0 0 var(--small-margin);
+		background-color: #8A977D;
+		color: #FFFFFF;
+		padding: var(--small-padding);
+		border-radius: 3rem;
+		border-top-left-radius: 0;
+	}
+}

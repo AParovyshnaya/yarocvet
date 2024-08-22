@@ -17,11 +17,6 @@ footer {
 		text-decoration-color: #F4442E;
 	}
 
-	.shortcut-contacts {
-		justify-content: center;
-		font-style: normal;
-	}
-
 	address {
 		display: flex;
 		flex-direction: row;
@@ -54,29 +49,22 @@ footer {
 		border-left: 0.25px;
 	}
 	
-	div.words {
-		flex: 0 0 auto;
+	address~div {
+		font-size: 75%;
 	}
 }
 
-.shortcut-contacts,
-.copyrights {
+.shortcut-contacts {
 	display: flex;
 	flex-direction: column;
-}
-
-.shortcut-contacts {
+	justify-content: start;
 	padding: var(--small-margin) 0 var(--small-margin) 0;
+	font-style: normal;
+	hyphens: auto;
 }
 
 .copyrights {
-	align-items: left;
-	border-color: #F7F3F5;
-	border-top-width: 1px;
-	border-style: solid none none none;
-}
-
-.copyrights,
-.version {
-	font-size: 1.5rem;
-}
+	padding: var(--small-margin) 0 0 0;
+	display: flex;
+	flex-direction: column;
+	}

@@ -1,6 +1,7 @@
 :root {
 	--margin: 2rem;
 	--small-margin: 1rem;
+	--small-padding: .5rem;
 }
 
 html {
