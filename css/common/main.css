@@ -38,6 +38,7 @@ main {
 
 section {
 	margin-bottom: var(--margin);
+	width: 100%;
 
 	display: flex;
 	flex-direction: column;

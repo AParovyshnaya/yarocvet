@@ -1,11 +1,11 @@
 footer {
 	background: var(--invert-backgound-color);
 	color: var(--invert-text-color);
-
 	display: flex;
 	flex-direction: column;
-
-	padding-left: 2vw;
+	align-items: flex-start;
+	gap: var(--small-margin);
+	padding: var(--small-margin) 2vw var(--small-margin) 2vw;
 }
 
 @scope (footer) {
@@ -16,10 +16,67 @@ footer {
 	a:hover {
 		text-decoration-color: #F4442E;
 	}
+
+	.shortcut-contacts {
+		justify-content: center;
+		font-style: normal;
+	}
+
+	address {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: normal;
+		gap: var(--small-margin) var(--small-margin);
+		
+	}
+
+	address::before,
+	address::after {
+		flex: 1 1 auto;
+		content: "";
+		width: 1rem;
+		height: auto;
+		font-style: normal;
+		border-style: solid;
+		color: white;
+		border-top: 0.5px;
+		border-bottom: 0.5px;
+	}
+
+	address::before {
+		border-style: solid;
+		border-right: 0.25px;
+	}
+
+	address::after {
+		border-style: solid;
+		border-left: 0.25px;
+	}
+	
+	div.words {
+		flex: 0 0 auto;
+	}
+}
+
+.shortcut-contacts,
+.copyrights {
+	display: flex;
+	flex-direction: column;
+}
+
+.shortcut-contacts {
+	padding: var(--small-margin) 0 var(--small-margin) 0;
 }
 
 .copyrights {
+	align-items: left;
 	border-color: #F7F3F5;
 	border-top-width: 1px;
 	border-style: solid none none none;
+}
+
+.copyrights,
+.version {
+	font-size: 1.5rem;
 }
