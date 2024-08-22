@@ -2,8 +2,27 @@
 	--margin: 2rem;
 	--small-margin: 1rem;
 	--small-padding: .5rem;
+	
+/*	https://web.dev/articles/color-scheme?hl=ru*/
+	
+	--indian-red-from-the-five: #DB5461;
+	--green-from-the-five: #8A977D;
+	--blue-from-the-five: #3D5467;
+	--black-from-the-five: #000F08;
+	--buff-from-the-five: #DBB077;	
+	
+	--anchor-decoration: #F4442E;
+	
+	--event-background: #FFFAFB;
+	
+	--scroll-background: var(--black-from-the-five);
+	--scroll-thumb-border: #2E4057;
+	--scroll-thumb: var(--green-from-the-five);
 }
 
+@media (prefers-color-scheme: dark) {
+/*	coming;*/
+}
 html {
 	font-size: 62.5%;
 }

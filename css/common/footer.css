@@ -14,7 +14,7 @@ footer {
 	}
 
 	a:hover {
-		text-decoration-color: #F4442E;
+		text-decoration-color: var(--anchor-decoration);
 	}
 
 	address {

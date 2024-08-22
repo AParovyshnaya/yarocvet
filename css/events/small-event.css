@@ -4,9 +4,9 @@
 		font-size: 2cqw;
 		z-index: 100;
 		transform: translate(20cqw, -50cqh);
-		color: #FFFAFB;
+		color: var(--event-background);
 		font-weight: 100;
-		-webkit-text-stroke: 0.5px black;
+		-webkit-text-stroke: 0.5px var(--black-from-the-five);
 	}
 }
 
