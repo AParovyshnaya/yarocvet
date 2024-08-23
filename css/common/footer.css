@@ -60,7 +60,6 @@ footer {
 	justify-content: start;
 	padding: var(--small-margin) 0 var(--small-margin) 0;
 	font-style: normal;
-	hyphens: auto;
 }
 
 .copyrights {

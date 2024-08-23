@@ -5,6 +5,7 @@ div.events {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: left;
+	align-content: center;
 	gap: var(--small-margin) var(--small-margin);
 }
 

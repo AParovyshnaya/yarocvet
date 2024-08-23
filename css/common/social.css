@@ -27,7 +27,7 @@
 		content: attr(title);
 		margin: 0 0 0 var(--small-margin);
 		background-color: var(--green-from-the-five);
-		color: var(--event-background);
+		color: var(--invert-text-color);
 		padding: var(--small-padding);
 		border-radius: 3rem;
 		border-top-left-radius: normal;
