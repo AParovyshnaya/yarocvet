@@ -1,13 +1,15 @@
-body::-webkit-scrollbar {
-	width: 8px;
-}
+@media (pointer: fine) {
+	body::-webkit-scrollbar {
+		width: 8px;
+	}
 
-body::-webkit-scrollbar-track {
-	background: #000f08;
-}
+	body::-webkit-scrollbar-track {
+		background: var(--scroll-background);
+	}
 
-body::-webkit-scrollbar-thumb {
-	background-color: #8A977D;
-	border-radius: 5px;
-	border: 2px solid #2E4057;
+	body::-webkit-scrollbar-thumb {
+		background-color: var(--scroll-thumb);
+		border-radius: 5px;
+		border: 2px solid var(--scroll-thumb-border);
+	}
 }

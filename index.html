@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport"
 		content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+	<meta name="color-scheme" content="light dark">
 	<title>Яроцвет</title>
 	<meta name="author" content="ГБОУ СОШ №617 Приморского района города Санкт-Петербург & Паровышная Анастасия">
 	<meta name="description"
@@ -16,12 +17,13 @@
 	<link rel="stylesheet" href="css/fonts/Montesrrat.css">
 	<link rel="stylesheet" href="css/common/main.css">
 	<link rel="stylesheet" href="css/common/footer.css">
-	<link rel="stylesheet" href="css/common/scroll.css">
 	<link rel="stylesheet" href="css/common/links.css">
-	<link rel="stylesheet" href="css/main/index.css">
+	<link rel="stylesheet" href="css/common/scroll.css">
+	<link rel="stylesheet" href="css/common/social.css">
 	<link rel="stylesheet" href="css/main/header.css">
-	<link rel="stylesheet" href="css/events/events.css">
+	<link rel="stylesheet" href="css/main/index.css">
 	<link rel="stylesheet" href="css/events/event.css">
+	<link rel="stylesheet" href="css/events/events.css">
 </head>
 
 <body>
@@ -33,15 +35,6 @@
 	<!--	</header>-->
 	<main>
 		<section class="cause-to-participate">
-			<span class="placeholder"></span>
-			<p class="placeholder">
-			</p>
-			<p class="placeholder-wave">
-			</p>
-			<span class="placeholder col-9 placeholder-lg"></span>
-			<p class="placeholder-wave">
-			</p>
-			</div>
 		</section>
 		<section class="events">
 			<h2 class="text-center">События:</h2>
@@ -73,7 +66,8 @@
 						<a href="pages/biology/evolution.html">Подробнее</a>
 					</div>
 				</article>
-				<article class="event" aria-hidden="true">
+				
+				<article class="event">
 					<img src="..." alt="...">
 					<div class="event-content">
 						<h5 class="placeholder">
@@ -83,7 +77,7 @@
 						<a></a>
 					</div>
 				</article>
-				<article class="event" aria-hidden="true" hidden>
+				<article class="event" hidden>
 					<img src="..." alt="...">
 					<div class="event-content">
 						<h5 class="placeholder">
@@ -93,7 +87,7 @@
 						<a></a>
 					</div>
 				</article>
-				<article class="event" aria-hidden="true" hidden>
+				<article class="event" hidden>
 					<img src="..." alt="...">
 					<div class="event-content">
 						<h5 class="placeholder">
@@ -103,23 +97,23 @@
 						<a></a>
 					</div>
 				</article>
-				<button type="button" class="btn btn-primary btn-lg" id="events-quantity" value="show"
-					type="button">Показать больше</button>
-				<script>
-					const button = document.getElementById("events-quantity");
-					const articles = document.getElementsByClassName("hesitant");
-					button.onclick = () => {
-						console.log(button.textContent === "Показать больше");
-						button.textContent === "Показать больше" ? change("Показать меньше", false) : change("Показать больше", true);
-						function change(text, status) {
-							button.textContent = text;
-							for (article of articles) {
-								article.hidden = status;
-							}
+			</div>
+			<button type="button" id="events-quantity" type="button">Показать больше</button>
+			<script>
+				const button = document.getElementById("events-quantity");
+				button.textContent = "Показать больше";
+				const min = 2;
+				const articles = Array.from(document.querySelectorAll("article.event")).slice(min);
+				button.onclick = () => {
+					button.textContent == "Показать больше" ? change("Показать меньше", false) : change("Показать больше", true);
+					function change(text, status) {
+						button.textContent = text;
+						for (article of articles) {
+							article.hidden = status;
 						}
 					}
-				</script>
-			</div>
+				}
+			</script>
 		</section>
 		<section class="contacts">
 			<iframe
@@ -127,19 +121,22 @@
 				width="90%" height="600" frameborder="0"></iframe>
 			<div hidden>Здесь будут контакты</div>
 		</section>
-
 	</main>
 	<footer>
-
-		<div class="shortcut-contacts">[ здесь будут контакты организатора ]
-		</div>
-		</hr>
+		<address>
+			<div class="shortcut-contacts">
+				<div>
+					Написать организаторам: <a href="mailto:a@exapmle.ru">an@exapmle.ru</a></div>
+				<div>Адрес: 000000, г. Живоград, проспект Интуитивный, д. 18</div>
+				<div>м. Пионерская, м. Удельная</div>
+			</div>
+		</address>
 		<div class="copyrights">
-			<div class="">
+			<div>
 				© 2024 <a href="http://www.school617.spb.ru/">ГБОУ СОШ №617 Приморского
 					района Санкт-Петербурга</a> — организатор и координатор мероприятия, поддержка сайта.
 			</div>
-			<div class="">
+			<div>
 				© 2024 <a href="https://github.com/aparovyshnaya">AParovyshnaya</a>
 				(Анастасия Паровышная) — сайт, изображения.
 			</div>
@@ -147,15 +144,10 @@
 				<a href="pages/resources.html">Ресурсы</a>
 			</div>
 		</div>
-		<div class="about-product">
-			<div>
-				С техническими ошибками и пожеланиями <a
-					href="https://github.com/AParovyshnaya/yarocvet/issues/new">пишите
-					в репозиторий на GitHub.</a>
-			</div>
-			<div>Сайт ещё не доделан. v0.5.</div>
-
+		<div class="social">
+			<a href="https://github.com/AParovyshnaya/yarocvet" title="Репозиторий проекта"></a>
 		</div>
+		<div class="version">Сайт ещё не доделан. v0.5.</div>
 	</footer>
 </body>
 

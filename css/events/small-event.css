@@ -1,0 +1,19 @@
+@media (min-width: 768px) {
+	.small-event::after {
+		content: "→";
+		font-size: 2cqw;
+		z-index: 100;
+		transform: translate(20cqw, -50cqh);
+		color: var(--event-background);
+		font-weight: 100;
+		-webkit-text-stroke: 0.5px var(--black-from-the-five);
+	}
+}
+
+@media (max-width: 768px) {
+	.small-event::after {}
+}
+
+.small-event:last-of-type::after {
+	content: "";
+}

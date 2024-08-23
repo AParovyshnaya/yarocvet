@@ -1,9 +1,14 @@
 div.events {
+	width: 100%;
+	
 	display: flex;
-
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: left;
+	align-content: center;
+	gap: var(--small-margin) var(--small-margin);
+}
 
-	gap: 30px 30px;
-
+button#events-quantity {
+	margin-top: var(--small-margin);
 }
