@@ -1,0 +1,17 @@
+.event.biology::before,
+.event.chemestry::before {
+	content: "";
+	width: 10rem;
+	height: auto;
+	margin-right: -2cqw;
+}
+
+.event.biology::before {
+	--big: 1rem;
+	--small: .75rem;
+	--green: var(--green-from-the-five);
+	--swap-birch: #647672;
+	--redwood: #A63D40;
+	--blue-screen: #4D6CFA;
+	background: var(--blue-screen);
+}

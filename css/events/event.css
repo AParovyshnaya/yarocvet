@@ -1,11 +1,14 @@
 article.event {
 	flex: 0 1 auto;
-	
+
 	max-width: 36%;
 	margin-right: auto;
-	
+
+	display: flex;
+	direction: row;
+
 	/*	for highlighting*/
-	background-color: var(--event-background);
+	background: var(--event-background);
 
 	padding-left: 5rem;
 	padding-right: 5rem;
@@ -19,21 +22,73 @@ article.event {
 	}
 }
 
-@scope (.event) {
+div.event-content {}
+
+.event-content>a:last-child {
+	--arrow: #FF9F1C;
+	--border: calc(var(--small-padding) + 2rem);
+
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	background: transparent;
+}
+
+.event-content>a:last-child::hover {
+	transform: translateX(20px);
+}
+
+.event-content>a:last-child::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	height: 100%;
+	width: calc(100% - var(--border) * 2);
+
+	padding-top: calc(var(--small-padding) / 2);
+	padding-bottom: calc(var(--small-padding) / 2);
+
+	border-bottom-left-radius: .5rem;
+	border-top-left-radius: .5rem;
+	background-color: var(--arrow);
+}
+
+.event-content>a:last-child::after {
+	content: "";
+	
+	width: 0;
+	height: 0;
+	border-top: var(--border) solid transparent;
+	border-left: calc(var(--border) * 2) solid blue;
+	border-bottom: var(--border) solid transparent;
+}
+
+.event p {
+	background: var(--event-background);
+}
+
+.event p.start,
+.event p.duration,
+.event p.age,
+.event p.speaker {
+	margin-left: var(--big-padding);
+	background: transparent;
+}
+
+@scope (.event-content) {
 	::before {
 		display: inline-block;
 		height: 16px;
 		width: 16px;
 		background-size: 16px 16px;
 		background-repeat: no-repeat;
-
 	}
 }
 
-@scope (.speaker) {
-	a {
-		color: var(--speaker-color);
-	}
+.speaker a {
+	color: var(--speaker-color);
 }
 
 .start::before {
