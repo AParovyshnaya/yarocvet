@@ -15,3 +15,10 @@
 	--blue-screen: #4D6CFA;
 	background: var(--blue-screen);
 }
+
+.biology>.event-content>a:last-child {
+	--arrow: #C1D7CA; 
+	--arrow-end: #F71735;
+	--arrow-text: #080A0D;
+	
+}

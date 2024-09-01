@@ -30,21 +30,26 @@ div.event-content {
 
 .event-content>a:last-child {
 	--arrow: #3D5467;
+	--arrow-end: #FF9F1C;
 	--arrow-text: #FFFAFB;
 	--border: calc(var(--small-padding) + 2rem);
 
-	z-index: 100;
-	color: var(--arrow-text);
-	position: relative;
 	align-self: center;
-	background-color: transparent;
+	z-index: 100;
+	position: relative;
 	display: inline-flex;
 	align-items: center;
-	align-content: center;
+	
+	color: var(--arrow-text);
+	padding: calc(var(--border) / 2);
+	transition: all 1s;
+	text-decoration: none;
 }
 
-.event-content>a:last-child::hover {
+.event-content>a:last-child:hover {
 	transform: translateX(20px);
+	text-decoration: underline;
+
 }
 
 .event-content>a:last-child::before {
@@ -53,11 +58,8 @@ div.event-content {
 	top: 0;
 	left: 0;
 	height: 100%;
-	width: calc(100% - var(--border) * 2);
+	width: 100%;
 	z-index: -1;
-
-	padding-top: calc(var(--small-padding) / 2);
-	padding-bottom: calc(var(--small-padding) / 2);
 
 	border-bottom-left-radius: .5rem;
 	border-top-left-radius: .5rem;
@@ -66,11 +68,12 @@ div.event-content {
 
 .event-content>a:last-child::after {
 	content: "";
-	
+	position: absolute;
+	left: 100%;
 	width: 0;
 	height: 0;
 	border-top: var(--border) solid transparent;
-	border-left: calc(var(--border) * 2) solid #FF9F1C;
+	border-left: calc(var(--border)*1.5) solid var(--arrow-end);
 	border-bottom: var(--border) solid transparent;
 }
 
