@@ -2,6 +2,7 @@
 	--margin: 2rem;
 	--small-margin: 1rem;
 	--big-padding: 2rem;
+	--padding: 1rem;
 	--small-padding: .5rem;
 	
 /*	https://web.dev/articles/color-scheme?hl=ru*/
@@ -71,3 +72,5 @@ section {
 h1, h2, h3, h4, h5 {
 	align-self: start;
 }
+
+[hidden] { display: none }

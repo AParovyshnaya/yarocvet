@@ -9,6 +9,13 @@ div.events {
 	gap: var(--small-margin) var(--small-margin);
 }
 
+article.event[hidden] {
+	display: none;
+}
+
 button#events-quantity {
 	margin-top: var(--small-margin);
+	
+	font: inherit;
+	padding: var(--padding);
 }
