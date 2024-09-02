@@ -1,6 +1,6 @@
 div.events {
 	width: 100%;
-	
+
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -16,6 +16,45 @@ article.event[hidden] {
 button#events-quantity {
 	margin-top: var(--small-margin);
 	
+	position: relative;
+	
 	font: inherit;
+	font-size: 1.5rem;
 	padding: var(--padding);
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+button#events-quantity::after,
+button#events-quantity::before {
+	content: "";
+	position: absolute;
+	--color: var(--indian-red-from-the-five);
+	--size: calc(var(--padding)*0.75 + 1.5rem);
+	transition: transform 1s;
+	width: 0;
+	height: 0;
+	border-top: var(--size) solid transparent;
+	border-bottom: var(--size) solid transparent;
+}
+
+button#events-quantity::before{
+	left: -15%;
+	border-right: var(--size) solid var(--color);
+}
+
+button#events-quantity::after {
+	left: 100%;
+	border-left: var(--size) solid var(--color);
+}
+
+button#events-quantity:hover::before {
+	transform: translateX(-20px);
+}
+
+button#events-quantity:hover::after {
+	transform: translateX(20px);
 }

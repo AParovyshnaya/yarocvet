@@ -2,6 +2,7 @@ article.event {
 	flex: 0 1 auto;
 
 	max-width: 36%;
+	height: fit-content;
 	margin-right: auto;
 
 	display: flex;
@@ -55,7 +56,6 @@ div.event-content {
 .event-content>a:last-child:hover {
 	transform: translateX(20px);
 	text-decoration: underline;
-
 }
 
 .event-content>a:last-child::before {
