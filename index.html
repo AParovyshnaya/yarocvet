@@ -43,7 +43,8 @@
 			<h2 class="text-center">События:</h2>
 			<div class="sort">
 				<div class="subjects">
-					Показать с предметом: <input type="checkbox" id="biology">Биология</input>
+					Показать с предметом: <input type="checkbox" id="biology"><label
+						for="biology">Биология</label>
 					<script>
 						const buttons = document.querySelectorAll("div.subjects > input[type=checkbox]");
 						for (button of buttons) {
@@ -52,15 +53,9 @@
 
 						function subject(trigger) {
 							const aims = document.querySelectorAll(`.event.${trigger.id}`);
-							console.log(Array.from(new Set(document.querySelectorAll(".event"))));
-							console.log(...document.querySelectorAll(".event"));
-							const a = new Set(Array(...aims).concat(...document.querySelectorAll(".event")));
-							console.log(a);
-							console.log(Array.from(a));							
 							for (event of (trigger.checked) ? aims : slice(document.querySelectorAll(".event"), aims, min)) {
 								event.hidden = !trigger.checked;
 							}
-							
 							function slice(all, aims, min) {
 								const unics = new Set(all);
 								aims.forEach((aim) => unics.add(aim));
@@ -111,24 +106,12 @@
 						<a>Хиремы уже мои</a>
 					</div>
 				</article>
-				<article class="event biology" hidden>
-					<img src="..." alt="...">
+				<article class="event" hidden>
 					<div class="event-content">
-						<h5 class="placeholder">
-						</h5>
-						<p class="placeholder">
-						</p>
-						<a></a>
 					</div>
 				</article>
-				<article class="event biology" hidden>
-					<img src="..." alt="...">
+				<article class="event" hidden>
 					<div class="event-content">
-						<h5 class="placeholder">
-						</h5>
-						<p class="placeholder">
-						</p>
-						<a></a>
 					</div>
 				</article>
 			</div>
