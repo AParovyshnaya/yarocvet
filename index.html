@@ -25,6 +25,7 @@
 	<link rel="stylesheet" href="css/events/event.css">
 	<link rel="stylesheet" href="css/events/event-image.css">
 	<link rel="stylesheet" href="css/events/events.css">
+	<link rel="stylesheet" href="css/events/events-sort.css">
 	<link rel="stylesheet" href="css/events/subject.css">
 </head>
 
@@ -40,6 +41,36 @@
 		</section>
 		<section class="events">
 			<h2 class="text-center">События:</h2>
+			<div class="sort">
+				<div class="subjects">
+					Показать с предметом: <input type="checkbox" id="biology">Биология</input>
+					<script>
+						const buttons = document.querySelectorAll("div.subjects > input[type=checkbox]");
+						for (button of buttons) {
+							button.addEventListener("change", (event) => subject(event.target));
+						}
+
+						function subject(trigger) {
+							const aims = document.querySelectorAll(`.event.${trigger.id}`);
+							console.log(Array.from(new Set(document.querySelectorAll(".event"))));
+							console.log(...document.querySelectorAll(".event"));
+							const a = new Set(Array(...aims).concat(...document.querySelectorAll(".event")));
+							console.log(a);
+							console.log(Array.from(a));							
+							for (event of (trigger.checked) ? aims : slice(document.querySelectorAll(".event"), aims, min)) {
+								event.hidden = !trigger.checked;
+							}
+							
+							function slice(all, aims, min) {
+								const unics = new Set(all);
+								aims.forEach((aim) => unics.add(aim));
+								return Array.from(unics).slice(min);
+							}
+						}
+					</script>
+				</div>
+
+			</div>
 			<div class="events">
 				<article class="event biology">
 					<div class="event-content">
@@ -71,15 +102,16 @@
 
 				<article class="event">
 					<div class="event-content">
-					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/%D0%9C%D0%B0%D1%80%D1%8C%D1%8F_%D0%9C%D0%BE%D1%80%D0%B5%D0%B2%D0%BD%D0%B0_1.jpg/1280px-%D0%9C%D0%B0%D1%80%D1%8C%D1%8F_%D0%9C%D0%BE%D1%80%D0%B5%D0%B2%D0%BD%D0%B0_1.jpg" alt="Изображения нет, но альтернативу нужно проработать.">
+						<img alt="Изображения нет, но альтернативу нужно проработать.">
 						<h3>А я событие без темы</h3>
 						<p>Зачем приходить, когда нет темы для разговора?</p>
-						<p> Вопрос провокационный, а на тему вербального общения можно и задуматься. Давайте в этом убедимся, придя на чаепитие. Мы будем молча играть в настольные игры
+						<p> Вопрос провокационный, а на тему вербального общения можно и задуматься. Давайте в этом
+							убедимся, придя на чаепитие. Мы будем молча играть в настольные игры
 							и учиться общаться жестами. Как мы можем привлекать внимание, если не слышим?</p>
 						<a>Хиремы уже мои</a>
 					</div>
 				</article>
-				<article class="event" hidden>
+				<article class="event biology" hidden>
 					<img src="..." alt="...">
 					<div class="event-content">
 						<h5 class="placeholder">
@@ -89,7 +121,7 @@
 						<a></a>
 					</div>
 				</article>
-				<article class="event" hidden>
+				<article class="event biology" hidden>
 					<img src="..." alt="...">
 					<div class="event-content">
 						<h5 class="placeholder">
@@ -100,16 +132,17 @@
 					</div>
 				</article>
 			</div>
-			<button type="button" id="events-quantity" type="button">Показать больше</button>
+			<button type="button" id="events-quantity" type="button" data-intention="more">Показать больше</button>
 			<script>
 				const button = document.getElementById("events-quantity");
 				button.textContent = "Показать больше";
 				const min = 2;
 				const articles = Array.from(document.querySelectorAll("article.event")).slice(min);
 				button.onclick = () => {
-					button.textContent == "Показать больше" ? change("Показать меньше", false) : change("Показать больше", true);
-					function change(text, status) {
+					button.textContent == "Показать больше" ? change("Показать меньше", "less", false) : change("Показать больше", "more", true);
+					function change(text, intention, status) {
 						button.textContent = text;
+						button.dataset.intention = intention;
 						for (article of articles) {
 							article.hidden = status;
 						}
