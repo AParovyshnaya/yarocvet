@@ -1,6 +1,6 @@
 div.events {
 	width: 100%;
-	
+
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -9,6 +9,77 @@ div.events {
 	gap: var(--small-margin) var(--small-margin);
 }
 
+article.event[hidden] {
+	display: none;
+}
+
 button#events-quantity {
+	--background: var(--black-from-the-five);
 	margin-top: var(--small-margin);
+
+	position: relative;
+
+	font: inherit;
+	font-size: 1.5rem;
+	padding: var(--padding);
+
+	color: var(--buff-from-the-five);
+	background-color: var(--background);
+	border: none;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+button#events-quantity::after,
+button#events-quantity::before {
+	--color: var(--indian-red-from-the-five);
+	--arrow: var(--background);
+	--size: calc(var(--padding)*0.45 + 1.5rem);
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: var(--size) solid transparent;
+	border-bottom: var(--size) solid transparent;
+	transition: all 1s;
+	z-index: -1;
+}
+
+button#events-quantity::before {
+	right: 100%;
+	border-right: var(--size) solid var(--arrow);
+}
+
+button#events-quantity[data-intention="less"]::before,
+button#events-quantity[data-intention="less"]::after {
+	--arrow: var(--color);
+	transform: rotate(180deg);
+}
+
+button#events-quantity::after {
+	left: 100%;
+	border-left: var(--size) solid var(--arrow);
+}
+
+button#events-quantity:hover::before {
+	--arrow: var(--color);
+	transform: translateX(-20px);
+}
+
+button#events-quantity:hover::after {
+	--arrow: var(--color);
+	transform: translateX(20px);
+}
+
+button#events-quantity[data-intention="less"]:hover::before {
+	--arrow: var(--background);
+	transform: translateX(20px) rotate(180deg);
+}
+
+button#events-quantity[data-intention="less"]:hover::after {
+	--arrow: var(--background);
+	transform: translateX(-20px) rotate(180deg);
 }

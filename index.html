@@ -23,7 +23,10 @@
 	<link rel="stylesheet" href="css/main/header.css">
 	<link rel="stylesheet" href="css/main/index.css">
 	<link rel="stylesheet" href="css/events/event.css">
+	<link rel="stylesheet" href="css/events/event-image.css">
 	<link rel="stylesheet" href="css/events/events.css">
+	<link rel="stylesheet" href="css/events/events-sort.css">
+	<link rel="stylesheet" href="css/events/subject.css">
 </head>
 
 <body>
@@ -38,8 +41,33 @@
 		</section>
 		<section class="events">
 			<h2 class="text-center">События:</h2>
+			<div class="sort">
+				<div class="subjects">
+					Показать с предметом: <input type="checkbox" id="biology"><label
+						for="biology">Биология</label>
+					<script>
+						const buttons = document.querySelectorAll("div.subjects > input[type=checkbox]");
+						for (button of buttons) {
+							button.addEventListener("change", (event) => subject(event.target));
+						}
+
+						function subject(trigger) {
+							const aims = document.querySelectorAll(`.event.${trigger.id}`);
+							for (event of (trigger.checked) ? aims : slice(document.querySelectorAll(".event"), aims, min)) {
+								event.hidden = !trigger.checked;
+							}
+							function slice(all, aims, min) {
+								const unics = new Set(all);
+								aims.forEach((aim) => unics.add(aim));
+								return Array.from(unics).slice(min);
+							}
+						}
+					</script>
+				</div>
+
+			</div>
 			<div class="events">
-				<article class="event">
+				<article class="event biology">
 					<div class="event-content">
 						<h3>
 							Как появилась современная теория эволюции
@@ -66,48 +94,38 @@
 						<a href="pages/biology/evolution.html">Подробнее</a>
 					</div>
 				</article>
-				
+
 				<article class="event">
-					<img src="..." alt="...">
 					<div class="event-content">
-						<h5 class="placeholder">
-						</h5>
-						<p class="placeholder">
-						</p>
-						<a></a>
+						<img alt="Изображения нет, но альтернативу нужно проработать.">
+						<h3>А я событие без темы</h3>
+						<p>Зачем приходить, когда нет темы для разговора?</p>
+						<p> Вопрос провокационный, а на тему вербального общения можно и задуматься. Давайте в этом
+							убедимся, придя на чаепитие. Мы будем молча играть в настольные игры
+							и учиться общаться жестами. Как мы можем привлекать внимание, если не слышим?</p>
+						<a>Хиремы уже мои</a>
 					</div>
 				</article>
 				<article class="event" hidden>
-					<img src="..." alt="...">
 					<div class="event-content">
-						<h5 class="placeholder">
-						</h5>
-						<p class="placeholder">
-						</p>
-						<a></a>
 					</div>
 				</article>
 				<article class="event" hidden>
-					<img src="..." alt="...">
 					<div class="event-content">
-						<h5 class="placeholder">
-						</h5>
-						<p class="placeholder">
-						</p>
-						<a></a>
 					</div>
 				</article>
 			</div>
-			<button type="button" id="events-quantity" type="button">Показать больше</button>
+			<button type="button" id="events-quantity" type="button" data-intention="more">Показать больше</button>
 			<script>
 				const button = document.getElementById("events-quantity");
 				button.textContent = "Показать больше";
 				const min = 2;
 				const articles = Array.from(document.querySelectorAll("article.event")).slice(min);
 				button.onclick = () => {
-					button.textContent == "Показать больше" ? change("Показать меньше", false) : change("Показать больше", true);
-					function change(text, status) {
+					button.textContent == "Показать больше" ? change("Показать меньше", "less", false) : change("Показать больше", "more", true);
+					function change(text, intention, status) {
 						button.textContent = text;
+						button.dataset.intention = intention;
 						for (article of articles) {
 							article.hidden = status;
 						}
@@ -116,9 +134,10 @@
 			</script>
 		</section>
 		<section class="contacts">
-			<iframe
+			<!--it eat too more traffic-->
+			<!--			<iframe
 				src="https://yandex.ru/map-widget/v1/?um=constructor%3A869b5a8153179dc688568e78df8bc29755238ffd4f80ef285eb11bb9c50f4a36&amp;source=constructor"
-				width="90%" height="600" frameborder="0"></iframe>
+				width="90%" height="600" frameborder="0"></iframe>-->
 			<div hidden>Здесь будут контакты</div>
 		</section>
 	</main>
@@ -138,11 +157,12 @@
 			</div>
 			<div>
 				© 2024 <a href="https://github.com/aparovyshnaya">AParovyshnaya</a>
-				(Анастасия Паровышная) — сайт, изображения.
+				(Анастасия Паровышная) — изображения (если не указано иное), сайт.
 			</div>
 			<div class="resources">
 				<a href="pages/resources.html">Ресурсы</a>
 			</div>
+			<div>При цитировании ссылка на сайт обязательна.</div>
 		</div>
 		<div class="social">
 			<a href="https://github.com/AParovyshnaya/yarocvet" title="Репозиторий проекта"></a>

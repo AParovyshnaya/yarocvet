@@ -1,0 +1,6 @@
+div.sort {
+	align-self: self-start;
+	
+	display: flex;
+	flex-direction: column;
+}

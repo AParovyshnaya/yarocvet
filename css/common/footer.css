@@ -8,50 +8,48 @@ footer {
 	padding: var(--small-margin) 2vw var(--small-margin) 2vw;
 }
 
-@scope (footer) {
-	a {
-		color: var(--invert-text-color);
-	}
+footer a {
+	color: var(--invert-text-color);
+}
 
-	a:hover {
-		text-decoration-color: var(--anchor-decoration);
-	}
+footer a:hover {
+	text-decoration-color: var(--anchor-decoration);
+}
 
-	address {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: normal;
-		gap: var(--small-margin) var(--small-margin);
+footer address {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: normal;
+	gap: var(--small-margin) var(--small-margin);
 
-	}
+}
 
-	address::before,
-	address::after {
-		flex: 1 1 auto;
-		content: "";
-		width: 1rem;
-		height: auto;
-		font-style: normal;
-		border-style: solid;
-		color: white;
-		border-top: 0.5px;
-		border-bottom: 0.5px;
-	}
+footer address::before,
+footer address::after {
+	flex: 1 1 auto;
+	content: "";
+	width: 1rem;
+	height: auto;
+	font-style: normal;
+	border-style: solid;
+	color: white;
+	border-top: 0.5px;
+	border-bottom: 0.5px;
+}
 
-	address::before {
-		border-style: solid;
-		border-right: 0.25px;
-	}
+footer address::before {
+	border-style: solid;
+	border-right: 0.25px;
+}
 
-	address::after {
-		border-style: solid;
-		border-left: 0.25px;
-	}
+footer address::after {
+	border-style: solid;
+	border-left: 0.25px;
+}
 
-	address~div {
-		font-size: 75%;
-	}
+footer address~div {
+	font-size: 75%;
 }
 
 .shortcut-contacts {
