@@ -1,5 +1,4 @@
-> [!CAUTION]
-> README is not actually. For some time, new content will be added.
+[Preview](https://aparovyshnaya.github.io/yarocvet/)!
 
 # Yarocvet
 
